@@ -9,6 +9,7 @@ class BrowserTestEnv {
   final tempDir = Directory.systemTemp.createTempSync();
   final String appPath;
   final bool headless;
+  final String? prerenderHtml;
 
   HttpServer? _server;
   Browser? _browser;
@@ -17,6 +18,7 @@ class BrowserTestEnv {
   BrowserTestEnv({
     required String appPath,
     this.headless = true,
+    this.prerenderHtml,
   }) : appPath = appPath.startsWith('test') ? appPath : 'test/browser/$appPath';
 
   Future<void> init() async {
@@ -31,16 +33,16 @@ class BrowserTestEnv {
     }
 
     // http server
-    _server = await _startHttpServer(tempDir);
+    _server = await _startHttpServer(tempDir, prerenderHtml);
     baseUrl = 'http://localhost:${_server!.port}';
 
     // browser
     _browser = await puppeteer.launch(headless: headless);
   }
 
-  Future<Page> newPage() async {
+  Future<Page> newPage([Function(ConsoleMessage)? onMessage]) async {
     final page = await _browser!.newPage();
-    page.onConsole.listen(print);
+    page.onConsole.listen(onMessage ?? print);
     await page.goto('$baseUrl/', wait: Until.networkIdle);
     return page;
   }
@@ -52,13 +54,14 @@ class BrowserTestEnv {
   }
 }
 
-Future<HttpServer> _startHttpServer(Directory baseDir) async {
+Future<HttpServer> _startHttpServer(Directory baseDir,
+    [String? prerenderHtml]) async {
   final staticHandler = createStaticHandler(baseDir.path);
   return await serve((rq) async {
     if (rq.requestedUri.path == '/') {
       return shelf.Response.ok(
         '<html><head><script src="/app.dart.js"></script></head>'
-        '<body><div id="root"></div></body></html>',
+        '<body><div id="root">${prerenderHtml ?? ''}</div></body></html>',
         headers: {
           'Content-Type': 'text/html',
         },
