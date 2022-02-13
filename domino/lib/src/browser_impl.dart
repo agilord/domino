@@ -89,6 +89,7 @@ class _DomBuilder extends DomBuilder {
     Map<String, String>? attributes,
     Map<String, DomEventFn>? events,
     DomLifecycleEventFn? onCreate,
+    DomLifecycleEventFn? onUpdate,
     DomLifecycleEventFn? onRemove,
   }) {
     late final tagLc = tag.toLowerCase();
@@ -210,6 +211,11 @@ class _DomBuilder extends DomBuilder {
     if (isNewElem && onCreate != null) {
       _callbacks.add(() {
         onCreate(_DomLifecycleEvent(_view, elem!));
+      });
+    }
+    if (!isNewElem && onUpdate != null) {
+      _callbacks.add(() {
+        onUpdate(_DomLifecycleEvent(_view, elem!));
       });
     }
   }

@@ -10,6 +10,7 @@ abstract class DomBuilder<L, V> {
     Map<String, String>? attributes,
     Map<String, DomEventFn<L, V>>? events,
     DomLifecycleEventFn<L>? onCreate,
+    DomLifecycleEventFn<L>? onUpdate,
     DomLifecycleEventFn<L>? onRemove,
   });
 
