@@ -104,6 +104,7 @@ class _DomBuilder extends DomBuilder {
     Map<String, String>? attributes,
     Map<String, DomEventFn>? events,
     DomLifecycleEventFn? onCreate,
+    DomLifecycleEventFn? onUpdate,
     DomLifecycleEventFn? onRemove,
   }) {
     if (_position.isNotEmpty) {
