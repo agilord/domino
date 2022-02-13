@@ -21,6 +21,7 @@ class DomElement<L, V> implements DomNode<L, V> {
   final Map<String, String>? _attributes;
   final Map<String, DomEventFn<L, V>>? _events;
   final DomLifecycleEventFn<L>? _onCreate;
+  final DomLifecycleEventFn<L>? _onUpdate;
   final DomLifecycleEventFn<L>? _onRemove;
 
   final List<DomNode>? _children;
@@ -34,6 +35,7 @@ class DomElement<L, V> implements DomNode<L, V> {
     Map<String, String>? attributes,
     Map<String, DomEventFn<L, V>>? events,
     DomLifecycleEventFn<L>? onCreate,
+    DomLifecycleEventFn<L>? onUpdate,
     DomLifecycleEventFn<L>? onRemove,
     Iterable<DomNode>? children,
     DomNode? child,
@@ -45,6 +47,7 @@ class DomElement<L, V> implements DomNode<L, V> {
         _attributes = attributes,
         _events = events,
         _onCreate = onCreate,
+        _onUpdate = onUpdate,
         _onRemove = onRemove,
         _children = __children(children, child, text);
 
@@ -59,6 +62,7 @@ class DomElement<L, V> implements DomNode<L, V> {
       attributes: _attributes,
       events: _events,
       onCreate: _onCreate,
+      onUpdate: _onUpdate,
       onRemove: _onRemove,
     );
     if (_children != null) {
