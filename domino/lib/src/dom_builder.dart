@@ -27,7 +27,7 @@ abstract class DomBuilder<L, V> {
   void skipRemainingNodes();
 
   /// Close the current element.
-  void close({String? tag});
+  L close({String? tag});
 
   /// Calls [DomNode.build] with the current [DomBuilder] on [node].
   void visit(DomNode node) => node.build(this);
@@ -49,7 +49,7 @@ typedef DomLifecycleEventFn<L> = Function(DomLifecycleEvent<L> event);
 typedef DomEventFn<L, V> = Function(DomEvent<L, V> event);
 
 /// DOM builder function.
-typedef DomBuilderFn = void Function(DomBuilder b);
+typedef DomBuilderFn<L, V> = void Function(DomBuilder<L, V> b);
 
 /// Provides lifecycle handling for a hierarchy of components.
 /// A [DomView] re-builds the UI after `invalidate()` is called.

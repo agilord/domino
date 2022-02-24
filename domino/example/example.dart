@@ -3,26 +3,26 @@ import 'dart:html';
 import 'package:domino/browser.dart';
 
 void main() {
-  window.onLoad.listen((_) => _main());
+  registerView(root: document.getElementById('root')!, builderFn: _app);
 }
 
-void _main() {
-  registerView(root: document.getElementById('root')!, builderFn: _App().build);
-}
+int _counter = 0;
 
-class _App extends DomNode {
-  int _counter = 0;
+void _app(DomBuilder<Element, Event> b) {
+  b.open(
+    'button',
+    id: 'app-button',
+    events: {
+      'click': (e) {
+        _counter++;
+        e.view.invalidate();
+      },
+    },
+  );
+  b.text('Click');
+  b.close();
 
-  @override
-  void build(DomBuilder b) {
-    b.visitAll([
-      DomElement('button', id: 'app-button', events: {
-        'click': (e) {
-          _counter++;
-          e.view.invalidate();
-        },
-      }),
-      DomElement('span', id: 'app-count', text: 'Counter: $_counter'),
-    ]);
-  }
+  b.open('div', id: 'app-count');
+  b.text('Counter: $_counter');
+  b.close();
 }
