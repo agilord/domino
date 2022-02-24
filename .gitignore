@@ -13,5 +13,8 @@ doc/api/
 *.iml
 .idea
 
+# macOS
+.DS_Store
+
 #
 .local-chromium

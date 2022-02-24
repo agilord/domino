@@ -6,7 +6,7 @@ import 'dom_builder.dart';
 /// Register DOM view in browser.
 DomView registerView({
   required Element root,
-  required DomBuilderFn builderFn,
+  required DomBuilderFn<Element, Event> builderFn,
   bool skipInitialUpdate = false,
 }) {
   final view = _View(root, builderFn);
@@ -16,7 +16,7 @@ DomView registerView({
 
 class _View extends DomView {
   final Element _root;
-  final DomBuilderFn _builderFn;
+  final DomBuilderFn<Element, Event> _builderFn;
 
   Future? _invalidate;
   bool _isDisposed = false;
@@ -49,7 +49,7 @@ class _View extends DomView {
     }
   }
 
-  void _updateWith(DomBuilderFn fn) {
+  void _updateWith(DomBuilderFn<Element, Event> fn) {
     final builder = _DomBuilder(this, _root);
     fn(builder);
     builder.close();
@@ -71,7 +71,7 @@ class _Position {
       container.nodes.length > cursor ? container.nodes[cursor] : null;
 }
 
-class _DomBuilder extends DomBuilder {
+class _DomBuilder extends DomBuilder<Element, Event> {
   final _View _view;
   final _positions = <_Position>[];
   final _callbacks = <Function>[];
@@ -87,10 +87,10 @@ class _DomBuilder extends DomBuilder {
     Iterable<String>? classes,
     Map<String, String>? styles,
     Map<String, String>? attributes,
-    Map<String, DomEventFn>? events,
-    DomLifecycleEventFn? onCreate,
-    DomLifecycleEventFn? onUpdate,
-    DomLifecycleEventFn? onRemove,
+    Map<String, DomEventFn<Element, Event>>? events,
+    DomLifecycleEventFn<Element>? onCreate,
+    DomLifecycleEventFn<Element>? onUpdate,
+    DomLifecycleEventFn<Element>? onRemove,
   }) {
     late final tagLc = tag.toLowerCase();
     final last = _positions.last;
@@ -221,7 +221,7 @@ class _DomBuilder extends DomBuilder {
   }
 
   @override
-  void close({String? tag}) {
+  Element close({String? tag}) {
     final last = _positions.removeLast();
     if (tag != null && last.tag != tag) {
       throw AssertionError('Tag missmatch: "$tag" != "$last".');
@@ -230,6 +230,8 @@ class _DomBuilder extends DomBuilder {
     while (last.container.nodes.length > last.cursor) {
       _onRemove(last.container.nodes.removeLast());
     }
+
+    return last.container;
   }
 
   void _onRemove(Node removed) {
@@ -331,7 +333,7 @@ extension on Element {
 class _ElementData {
   String? key;
   Map<String, _EventBinding>? events;
-  DomLifecycleEventFn? onRemove;
+  DomLifecycleEventFn<Element>? onRemove;
   bool subTreeOnRemove = false;
 
   bool get isNotEmpty =>
@@ -353,7 +355,7 @@ class _EventBinding {
   final _View view;
   final Element element;
   final String type;
-  DomEventFn fn;
+  DomEventFn<Element, Event> fn;
   StreamSubscription? subscription;
 
   _EventBinding(this.view, this.element, this.type, this.fn);

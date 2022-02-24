@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2
+
+- For browser implementation of `DomBuilder`, the`close()` method now returns the created `Element`.
+
 ## 0.8.1
 
 - `onUpdate` callback similar to `onCreate`.
