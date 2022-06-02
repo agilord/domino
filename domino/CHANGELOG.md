@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.3
+
+- `renderMarkup` has `prefixContent` parameter to support `DOCTYPE` before the HTML content.
+
 ## 0.8.2
 
 - For browser implementation of `DomBuilder`, the`close()` method now returns the created `Element`.

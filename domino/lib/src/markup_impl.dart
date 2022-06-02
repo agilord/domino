@@ -9,8 +9,12 @@ final _attributeEscape = HtmlEscape(HtmlEscapeMode.attribute);
 String renderMarkup({
   required DomBuilderFn builderFn,
   DomValidator? domValidator,
+  String? prefixContent,
 }) {
   final sink = StringBuffer();
+  if (prefixContent != null) {
+    sink.write(prefixContent);
+  }
   renderMarkupIntoSink(
     sink: sink,
     builderFn: builderFn,

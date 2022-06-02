@@ -75,8 +75,8 @@ class _DomBuilder extends DomBuilder<Element, Event> {
   final _View _view;
   final _positions = <_Position>[];
   final _callbacks = <Function>[];
-  _DomBuilder(this._view, Element _container) {
-    _positions.add(_Position(_container.tagName, _container));
+  _DomBuilder(this._view, Element container) {
+    _positions.add(_Position(container.tagName, container));
   }
 
   @override

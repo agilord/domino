@@ -1,6 +1,6 @@
 name: domino
 description: An incremental DOM library, with support for virtual DOM and components.
-version: 0.8.2
+version: 0.8.3
 homepage: https://github.com/agilord/domino/tree/main/domino
 
 environment:
@@ -9,7 +9,7 @@ environment:
 dependencies:
 
 dev_dependencies:
-  lints: ^1.0.0
+  lints: ^2.0.0
   puppeteer: ^2.5.0
   shelf: ^1.2.0
   shelf_static: ^1.1.0
