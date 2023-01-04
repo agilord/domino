@@ -1,0 +1,10 @@
+name: Test publishing flow
+
+on:
+  push:
+
+jobs:
+  publish:
+    uses: isoos/setup-dart/.github/workflows/publish.yml@publish-workflow
+    with:
+      working-directory: domino

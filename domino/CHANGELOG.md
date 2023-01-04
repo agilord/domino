@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.3+1
+
+- Testing automatic publishing workflow.
+
 ## 0.8.3
 
 - `renderMarkup` has `prefixContent` parameter to support `DOCTYPE` before the HTML content.
