@@ -2,9 +2,11 @@ name: Test publishing flow
 
 on:
   push:
+    tags:
 
 jobs:
   publish:
     uses: isoos/setup-dart/.github/workflows/publish.yml@publish-workflow
     with:
+      environment: prod
       working-directory: domino
