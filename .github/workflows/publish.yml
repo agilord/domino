@@ -3,10 +3,11 @@ name: Test publishing flow
 on:
   push:
     tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
   publish:
     uses: isoos/setup-dart/.github/workflows/publish.yml@publish-workflow
     with:
-      environment: prod2
+      environment: prod
       working-directory: domino
