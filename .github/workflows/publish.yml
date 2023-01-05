@@ -8,5 +8,5 @@ jobs:
   publish:
     uses: isoos/setup-dart/.github/workflows/publish.yml@publish-workflow
     with:
-      environment: prod
+      environment: prod2
       working-directory: domino
