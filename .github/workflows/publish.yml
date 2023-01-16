@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    uses: isoos/setup-dart/.github/workflows/publish.yml@publish-workflow
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@a57a6c04cf7d4840e88432aad6281d1e125f0d46
     with:
       environment: prod
       working-directory: domino
