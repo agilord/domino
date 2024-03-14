@@ -103,6 +103,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     var isNewElem = true;
 
     final reuseKey = key ?? id;
+    // ignore: unnecessary_null_comparison
     if (elem == null) {
       Element? matched;
       for (final n in last.container.nodes.skip(last.cursor)) {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.4
+
+- Updated dev dependencies and lints.
+
 ## 0.8.3+1
 
 - Testing automatic publishing workflow.
