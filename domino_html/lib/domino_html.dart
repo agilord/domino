@@ -1,8 +1,8 @@
 import 'package:domino/domino.dart';
 
-/// The <a> HTML element (or anchor element), with its href attribute, creates
-/// a hyperlink to web pages, files, email addresses, locations in the same
-/// page, or anything else a URL can address.
+/// Together with its href attribute, creates a hyperlink to web pages, files,
+/// email addresses, locations within the current page, or anything else a URL
+/// can address.
 DomElement<L, V> a<L, V>({
   String? key,
   List<String>? classes,
@@ -17,10 +17,6 @@ DomElement<L, V> a<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -111,7 +107,6 @@ DomElement<L, V> a<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (download != null) 'download': download,
       if (draggable != null) 'draggable': draggable,
@@ -146,9 +141,7 @@ DomElement<L, V> a<L, V>({
   );
 }
 
-/// The <abbr> HTML element represents an abbreviation or acronym; the optional
-/// title attribute can provide an expansion or description for the abbreviation.
-/// If present, title must contain this full description and nothing else.
+/// Represents an abbreviation or acronym.
 DomElement<L, V> abbr<L, V>({
   String? key,
   List<String>? classes,
@@ -163,10 +156,6 @@ DomElement<L, V> abbr<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -226,7 +215,6 @@ DomElement<L, V> abbr<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -252,8 +240,8 @@ DomElement<L, V> abbr<L, V>({
   );
 }
 
-/// The <acronym> HTML element allows authors to clearly indicate a sequence
-/// of characters that compose an acronym or abbreviation for a word.
+/// Allows authors to clearly indicate a sequence of characters that compose
+/// an acronym or abbreviation for a word.
 DomElement<L, V> acronym<L, V>({
   String? key,
   List<String>? classes,
@@ -268,10 +256,6 @@ DomElement<L, V> acronym<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -331,7 +315,6 @@ DomElement<L, V> acronym<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -357,8 +340,8 @@ DomElement<L, V> acronym<L, V>({
   );
 }
 
-/// The <address> HTML element indicates that the enclosed HTML provides contact
-/// information for a person or people, or for an organization.
+/// Indicates that the enclosed HTML provides contact information for a person
+/// or people, or for an organization.
 DomElement<L, V> address<L, V>({
   String? key,
   List<String>? classes,
@@ -373,10 +356,6 @@ DomElement<L, V> address<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -436,7 +415,6 @@ DomElement<L, V> address<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -462,131 +440,8 @@ DomElement<L, V> address<L, V>({
   );
 }
 
-/// The obsolete HTML Applet Element (<applet>) embeds a Java applet into the
-/// document; this element has been deprecated in favor of object.
-DomElement<L, V> applet<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
-
-  /// Alternative text in case an image can't be displayed.
-  String? alt,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// Specifies the URL of the applet's class file to be loaded and executed.
-  String? code,
-
-  /// This attribute gives the absolute or relative URL of the directory where
-  /// applets' .class files referenced by the code attribute are stored.
-  String? codebase,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'applet',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
-      if (alt != null) 'alt': alt,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (code != null) 'code': code,
-      if (codebase != null) 'codebase': codebase,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <area> HTML element defines an area inside an image map that has predefined
-/// clickable areas. An image map allows geometric areas on an image to be associated
-/// with Hyperlink.
+/// Defines an area inside an image map that has predefined clickable areas.
+/// An image map allows geometric areas on an image to be associated with hyperlink.
 DomElement<L, V> area<L, V>({
   String? key,
   List<String>? classes,
@@ -604,10 +459,6 @@ DomElement<L, V> area<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// A set of values specifying the coordinates of the hot-spot region.
   String? coords,
@@ -628,9 +479,6 @@ DomElement<L, V> area<L, V>({
 
   /// The URL of a linked resource.
   String? href,
-
-  /// Specifies the language of the linked resource.
-  String? hreflang,
 
   /// Often used with CSS to style a specific element. The value of this
   /// attribute must be unique.
@@ -702,14 +550,12 @@ DomElement<L, V> area<L, V>({
       if (alt != null) 'alt': alt,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (coords != null) 'coords': coords,
       if (dir != null) 'dir': dir,
       if (download != null) 'download': download,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
       if (href != null) 'href': href,
-      if (hreflang != null) 'hreflang': hreflang,
       if (id != null) 'id': id,
       if (itemprop != null) 'itemprop': itemprop,
       if (lang != null) 'lang': lang,
@@ -738,12 +584,11 @@ DomElement<L, V> area<L, V>({
   );
 }
 
-/// The <article> HTML element represents a self-contained composition in a
-/// document, page, application, or site, which is intended to be independently
-/// distributable or reusable (e.g., in syndication). Examples include: a forum
-/// post, a magazine or newspaper article, or a blog entry, a product card,
-/// a user-submitted comment, an interactive widget or gadget, or any other
-/// independent item of content.
+/// Represents a self-contained composition in a document, page, application,
+/// or site, which is intended to be independently distributable or reusable
+/// (e.g., in syndication). Examples include a forum post, a magazine or newspaper
+/// article, a blog entry, a product card, a user-submitted comment, an interactive
+/// widget or gadget, or any other independent item of content.
 DomElement<L, V> article<L, V>({
   String? key,
   List<String>? classes,
@@ -758,10 +603,6 @@ DomElement<L, V> article<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -821,7 +662,6 @@ DomElement<L, V> article<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -847,9 +687,9 @@ DomElement<L, V> article<L, V>({
   );
 }
 
-/// The <aside> HTML element represents a portion of a document whose content
-/// is only indirectly related to the document's main content. Asides are frequently
-/// presented as sidebars or call-out boxes.
+/// Represents a portion of a document whose content is only indirectly related
+/// to the document's main content. Asides are frequently presented as sidebars
+/// or call-out boxes.
 DomElement<L, V> aside<L, V>({
   String? key,
   List<String>? classes,
@@ -864,10 +704,6 @@ DomElement<L, V> aside<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -927,7 +763,6 @@ DomElement<L, V> aside<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -953,10 +788,10 @@ DomElement<L, V> aside<L, V>({
   );
 }
 
-/// The <audio> HTML element is used to embed sound content in documents. It
-/// may contain one or more audio sources, represented using the src attribute
-/// or the source element: the browser will choose the most suitable one. It
-/// can also be the destination for streamed media, using a MediaStream.
+/// Used to embed sound content in documents. It may contain one or more audio
+/// sources, represented using the src attribute or the source element: the
+/// browser will choose the most suitable one. It can also be the destination
+/// for streamed media, using a MediaStream.
 DomElement<L, V> audio<L, V>({
   String? key,
   List<String>? classes,
@@ -972,15 +807,8 @@ DomElement<L, V> audio<L, V>({
   /// The audio or video should play as soon as possible.
   bool? autoplay,
 
-  /// Contains the time range of already buffered media.
-  String? buffered,
-
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates whether the browser should show playback controls to the user.
   bool? controls,
@@ -1060,9 +888,7 @@ DomElement<L, V> audio<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autoplay ?? false) 'autoplay': 'autoplay',
-      if (buffered != null) 'buffered': buffered,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (controls ?? false) 'controls': 'controls',
       if (crossorigin != null) 'crossorigin': crossorigin,
       if (dir != null) 'dir': dir,
@@ -1094,12 +920,13 @@ DomElement<L, V> audio<L, V>({
   );
 }
 
-/// The <b> HTML element is used to draw the reader's attention to the element's
-/// contents, which are not otherwise granted special importance. This was formerly
-/// known as the Boldface element, and most browsers still draw the text in
-/// boldface. However, you should not use <b> for styling text; instead, you
-/// should use the CSS font-weight property to create boldface text, or the
-/// strong element to indicate that text is of special importance.
+/// Used to draw the reader's attention to the element's contents, which are
+/// not otherwise granted special importance. This was formerly known as the
+/// Boldface element, and most browsers still draw the text in boldface. However,
+/// you should not use <b> for styling text or granting importance. If you wish
+/// to create boldface text, you should use the CSS font-weight property. If
+/// you wish to indicate an element is of special importance, you should use
+/// the strong element.
 DomElement<L, V> b<L, V>({
   String? key,
   List<String>? classes,
@@ -1114,10 +941,6 @@ DomElement<L, V> b<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -1177,7 +1000,6 @@ DomElement<L, V> b<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -1203,8 +1025,8 @@ DomElement<L, V> b<L, V>({
   );
 }
 
-/// The <base> HTML element specifies the base URL to use for all relative URLs
-/// in a document. There can be only one <base> element in a document.
+/// Specifies the base URL to use for all relative URLs in a document. There
+/// can be only one such element in a document.
 DomElement<L, V> base<L, V>({
   String? key,
   List<String>? classes,
@@ -1219,10 +1041,6 @@ DomElement<L, V> base<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -1290,7 +1108,6 @@ DomElement<L, V> base<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -1318,127 +1135,10 @@ DomElement<L, V> base<L, V>({
   );
 }
 
-/// The <basefont> HTML element is deprecated. It sets a default font face,
-/// size, and color for the other elements which are descended from its parent
-/// element. With this set, the font's size can then be varied relative to the
-/// base size using the font element.
-DomElement<L, V> basefont<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// This attribute sets the text color using either a named color or a
-  /// color specified in the hexadecimal #RRGGBB format.
-  ///
-  ///
-  ///
-  /// Note: This is a legacy attribute. Please use the
-  /// CSS color property instead.
-  String? color,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'basefont',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (color != null) 'color': color,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <bdi> HTML element tells the browser's bidirectional algorithm to treat
-/// the text it contains in isolation from its surrounding text. It's particularly
-/// useful when a website dynamically inserts some text and doesn't know the
-/// directionality of the text being inserted.
+/// Tells the browser's bidirectional algorithm to treat the text it contains
+/// in isolation from its surrounding text. It's particularly useful when a
+/// website dynamically inserts some text and doesn't know the directionality
+/// of the text being inserted.
 DomElement<L, V> bdi<L, V>({
   String? key,
   List<String>? classes,
@@ -1453,10 +1153,6 @@ DomElement<L, V> bdi<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -1516,7 +1212,6 @@ DomElement<L, V> bdi<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -1542,8 +1237,8 @@ DomElement<L, V> bdi<L, V>({
   );
 }
 
-/// The <bdo> HTML element overrides the current directionality of text, so
-/// that the text within is rendered in a different direction.
+/// Overrides the current directionality of text, so that the text within is
+/// rendered in a different direction.
 DomElement<L, V> bdo<L, V>({
   String? key,
   List<String>? classes,
@@ -1558,10 +1253,6 @@ DomElement<L, V> bdo<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -1621,7 +1312,6 @@ DomElement<L, V> bdo<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -1647,119 +1337,9 @@ DomElement<L, V> bdo<L, V>({
   );
 }
 
-/// The <bgsound> HTML element is deprecated. It sets up a sound file to play
-/// in the background while the page is used; use audio instead.
-DomElement<L, V> bgsound<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Indicates whether the media should start playing from the start when
-  /// it's finished.
-  bool? loop,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'bgsound',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (loop ?? false) 'loop': 'loop',
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <big> HTML deprecated element renders the enclosed text at a font size
-/// one level larger than the surrounding text (medium becomes large, for example).
-/// The size is capped at the browser's maximum permitted font size.
+/// Renders the enclosed text at a font size one level larger than the surrounding
+/// text (medium becomes large, for example). The size is capped at the browser's
+/// maximum permitted font size.
 DomElement<L, V> big<L, V>({
   String? key,
   List<String>? classes,
@@ -1774,10 +1354,6 @@ DomElement<L, V> big<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -1837,7 +1413,6 @@ DomElement<L, V> big<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -1863,116 +1438,10 @@ DomElement<L, V> big<L, V>({
   );
 }
 
-/// The <blink> HTML element is a non-standard element which causes the enclosed
-/// text to flash slowly.
-DomElement<L, V> blink<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'blink',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <blockquote> HTML element indicates that the enclosed text is an extended
-/// quotation. Usually, this is rendered visually by indentation (see Notes
-/// for how to change it). A URL for the source of the quotation may be given
-/// using the cite attribute, while a text representation of the source can
-/// be given using the cite element.
+/// Indicates that the enclosed text is an extended quotation. Usually, this
+/// is rendered visually by indentation. A URL for the source of the quotation
+/// may be given using the cite attribute, while a text representation of the
+/// source can be given using the <cite> element.
 DomElement<L, V> blockquote<L, V>({
   String? key,
   List<String>? classes,
@@ -1990,10 +1459,6 @@ DomElement<L, V> blockquote<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2054,7 +1519,6 @@ DomElement<L, V> blockquote<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (cite != null) 'cite': cite,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2080,8 +1544,8 @@ DomElement<L, V> blockquote<L, V>({
   );
 }
 
-/// The <body> HTML element represents the content of an HTML document. There
-/// can be only one <body> element in a document.
+/// represents the content of an HTML document. There can be only one such element
+/// in a document.
 DomElement<L, V> body<L, V>({
   String? key,
   List<String>? classes,
@@ -2111,10 +1575,6 @@ DomElement<L, V> body<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2176,7 +1636,6 @@ DomElement<L, V> body<L, V>({
       if (background != null) 'background': background,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2202,9 +1661,8 @@ DomElement<L, V> body<L, V>({
   );
 }
 
-/// The <br> HTML element produces a line break in text (carriage-return). It
-/// is useful for writing a poem or an address, where the division of lines
-/// is significant.
+/// Produces a line break in text (carriage-return). It is useful for writing
+/// a poem or an address, where the division of lines is significant.
 DomElement<L, V> br<L, V>({
   String? key,
   List<String>? classes,
@@ -2219,10 +1677,6 @@ DomElement<L, V> br<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2282,7 +1736,6 @@ DomElement<L, V> br<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2308,10 +1761,9 @@ DomElement<L, V> br<L, V>({
   );
 }
 
-/// The <button> HTML element is an interactive element activated by a user
-/// with a mouse, keyboard, finger, voice command, or other assistive technology.
-/// Once activated, it then performs a programmable action, such as submitting
-/// a form or opening a dialog.
+/// An interactive element activated by a user with a mouse, keyboard, finger,
+/// voice command, or other assistive technology. Once activated, it performs
+/// an action, such as submitting a form or opening a dialog.
 DomElement<L, V> button<L, V>({
   String? key,
   List<String>? classes,
@@ -2324,15 +1776,8 @@ DomElement<L, V> button<L, V>({
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
 
-  /// The element should be automatically focused after the page loaded.
-  bool? autofocus,
-
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2351,28 +1796,28 @@ DomElement<L, V> button<L, V>({
   /// the <form>.
   String? formaction,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute sets the encoding type to use during form submission. If
   /// this attribute is specified, it overrides the
   /// enctype attribute of the button's
   /// form owner.
   String? formenctype,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute sets the submission method to use during form submission
   /// (GET, POST, etc.). If this attribute is
   /// specified, it overrides the method attribute of the
   /// button's form owner.
   String? formmethod,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this boolean attribute specifies that the form is not to be validated
   /// when it is submitted. If this attribute is specified, it overrides the
   /// novalidate attribute of the button's
   /// form owner.
   bool? formnovalidate,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute specifies the browsing context (for example, tab, window,
   /// or inline frame) in which to display the response that is received after
   /// submitting the form. If this attribute is specified, it overrides the
@@ -2441,9 +1886,7 @@ DomElement<L, V> button<L, V>({
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (autofocus ?? false) 'autofocus': 'autofocus',
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (disabled ?? false) 'disabled': 'disabled',
       if (draggable != null) 'draggable': draggable,
@@ -2479,8 +1922,8 @@ DomElement<L, V> button<L, V>({
   );
 }
 
-/// Use the HTML <canvas> element with either the canvas scripting API or the
-/// WebGL API to draw graphics and animations.
+/// Container element to use with either the canvas scripting API or the WebGL
+/// API to draw graphics and animations.
 DomElement<L, V> canvas<L, V>({
   String? key,
   List<String>? classes,
@@ -2495,10 +1938,6 @@ DomElement<L, V> canvas<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2578,7 +2017,6 @@ DomElement<L, V> canvas<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (height != null) 'height': height,
@@ -2606,7 +2044,7 @@ DomElement<L, V> canvas<L, V>({
   );
 }
 
-/// The <caption> HTML element specifies the caption (or title) of a table.
+/// Specifies the caption (or title) of a table.
 DomElement<L, V> caption<L, V>({
   String? key,
   List<String>? classes,
@@ -2616,18 +2054,11 @@ DomElement<L, V> caption<L, V>({
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
 
-  /// Specifies the horizontal alignment of the element.
-  String? align,
-
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2685,10 +2116,8 @@ DomElement<L, V> caption<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2714,9 +2143,8 @@ DomElement<L, V> caption<L, V>({
   );
 }
 
-/// The <center> HTML element is a block-level element that displays its block-level
-/// or inline contents centered horizontally within its containing element.
-/// The container is usually, but isn't required to be, body.
+/// Displays its block-level or inline contents centered horizontally within
+/// its containing element.
 DomElement<L, V> center<L, V>({
   String? key,
   List<String>? classes,
@@ -2731,10 +2159,6 @@ DomElement<L, V> center<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2794,7 +2218,6 @@ DomElement<L, V> center<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2820,10 +2243,9 @@ DomElement<L, V> center<L, V>({
   );
 }
 
-/// The <cite> HTML element is used to describe a reference to a cited creative
-/// work, and must include the title of that work. The reference may be in an
-/// abbreviated form according to context-appropriate conventions related to
-/// citation metadata.
+/// Used to mark up the title of a cited creative work. The reference may be
+/// in an abbreviated form according to context-appropriate conventions related
+/// to citation metadata.
 DomElement<L, V> cite<L, V>({
   String? key,
   List<String>? classes,
@@ -2838,10 +2260,6 @@ DomElement<L, V> cite<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -2901,7 +2319,6 @@ DomElement<L, V> cite<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -2927,9 +2344,9 @@ DomElement<L, V> cite<L, V>({
   );
 }
 
-/// The <code> HTML element displays its contents styled in a fashion intended
-/// to indicate that the text is a short fragment of computer code. By default,
-/// the content text is displayed using the user agent default monospace font.
+/// Displays its contents styled in a fashion intended to indicate that the
+/// text is a short fragment of computer code. By default, the content text
+/// is displayed using the user agent's default monospace font.
 DomElement<L, V> code<L, V>({
   String? key,
   List<String>? classes,
@@ -2944,10 +2361,6 @@ DomElement<L, V> code<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3007,7 +2420,6 @@ DomElement<L, V> code<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3033,9 +2445,9 @@ DomElement<L, V> code<L, V>({
   );
 }
 
-/// The <col> HTML element defines a column within a table and is used for defining
-/// common semantics on all common cells. It is generally found within a colgroup
-/// element.
+/// Defines one or more columns in a column group represented by its implicit
+/// or explicit parent <colgroup> element. The <col> element is only valid as
+/// a child of a <colgroup> element that has no span attribute defined.
 DomElement<L, V> col<L, V>({
   String? key,
   List<String>? classes,
@@ -3044,9 +2456,6 @@ DomElement<L, V> col<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -3060,10 +2469,6 @@ DomElement<L, V> col<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3124,11 +2529,9 @@ DomElement<L, V> col<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3155,7 +2558,7 @@ DomElement<L, V> col<L, V>({
   );
 }
 
-/// The <colgroup> HTML element defines a group of columns within a table.
+/// Defines a group of columns within a table.
 DomElement<L, V> colgroup<L, V>({
   String? key,
   List<String>? classes,
@@ -3164,9 +2567,6 @@ DomElement<L, V> colgroup<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -3180,10 +2580,6 @@ DomElement<L, V> colgroup<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3244,11 +2640,9 @@ DomElement<L, V> colgroup<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3275,63 +2669,11 @@ DomElement<L, V> colgroup<L, V>({
   );
 }
 
-///
-DomElement<L, V> command<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Indicates whether the element should be checked on page load.
-  bool? checked,
-
-  /// Indicates whether the user can interact with the element.
-  bool? disabled,
-
-  /// Specifies a picture which represents the command.
-  String? icon,
-
-  ///
-  String? radiogroup,
-
-  /// Defines the type of the element.
-  String? type,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'command',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (checked ?? false) 'checked': 'checked',
-      if (disabled ?? false) 'disabled': 'disabled',
-      if (icon != null) 'icon': icon,
-      if (radiogroup != null) 'radiogroup': radiogroup,
-      if (type != null) 'type': type,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <content> HTML element—an obsolete part of the Web Components suite
-/// of technologies—was used inside of Shadow DOM as an insertion point, and
-/// wasn't meant to be used in ordinary HTML. It has now been replaced by the
-/// slot element, which creates a point in the DOM at which a shadow DOM can
-/// be inserted.
+/// An obsolete part of the Web Components suite of technologiesâwas used
+/// inside of Shadow DOM as an insertion point, and wasn't meant to be used
+/// in ordinary HTML. It has now been replaced by the <slot> element, which
+/// creates a point in the DOM at which a shadow DOM can be inserted. Consider
+/// using <slot> instead.
 DomElement<L, V> content<L, V>({
   String? key,
   List<String>? classes,
@@ -3346,10 +2688,6 @@ DomElement<L, V> content<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3409,7 +2747,6 @@ DomElement<L, V> content<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3435,9 +2772,8 @@ DomElement<L, V> content<L, V>({
   );
 }
 
-/// The <data> HTML element links a given piece of content with a machine-readable
-/// translation. If the content is time- or date-related, the time element must
-/// be used.
+/// Links a given piece of content with a machine-readable translation. If the
+/// content is time- or date-related, the<time> element must be used.
 DomElement<L, V> data<L, V>({
   String? key,
   List<String>? classes,
@@ -3452,10 +2788,6 @@ DomElement<L, V> data<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3519,7 +2851,6 @@ DomElement<L, V> data<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3546,9 +2877,8 @@ DomElement<L, V> data<L, V>({
   );
 }
 
-/// The <datalist> HTML element contains a set of option elements that represent
-/// the permissible or recommended options available to choose from within other
-/// controls.
+/// Contains a set of <option> elements that represent the permissible or recommended
+/// options available to choose from within other controls.
 DomElement<L, V> datalist<L, V>({
   String? key,
   List<String>? classes,
@@ -3563,10 +2893,6 @@ DomElement<L, V> datalist<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3626,7 +2952,6 @@ DomElement<L, V> datalist<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3652,8 +2977,8 @@ DomElement<L, V> datalist<L, V>({
   );
 }
 
-/// The <dd> HTML element provides the description, definition, or value for
-/// the preceding term (dt) in a description list (dl).
+/// Provides the description, definition, or value for the preceding term (<dt>)
+/// in a description list (<dl>).
 DomElement<L, V> dd<L, V>({
   String? key,
   List<String>? classes,
@@ -3668,10 +2993,6 @@ DomElement<L, V> dd<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3731,7 +3052,6 @@ DomElement<L, V> dd<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3757,10 +3077,10 @@ DomElement<L, V> dd<L, V>({
   );
 }
 
-/// The <del> HTML element represents a range of text that has been deleted
-/// from a document. This can be used when rendering "track changes" or source
-/// code diff information, for example. The ins element can be used for the
-/// opposite purpose: to indicate text that has been added to the document.
+/// Represents a range of text that has been deleted from a document. This can
+/// be used when rendering "track changes" or source code diff information,
+/// for example. The <ins> element can be used for the opposite purpose: to
+/// indicate text that has been added to the document.
 DomElement<L, V> del<L, V>({
   String? key,
   List<String>? classes,
@@ -3778,10 +3098,6 @@ DomElement<L, V> del<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates the date and time associated with the element.
   String? datetime,
@@ -3845,7 +3161,6 @@ DomElement<L, V> del<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (cite != null) 'cite': cite,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (datetime != null) 'datetime': datetime,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -3872,9 +3187,9 @@ DomElement<L, V> del<L, V>({
   );
 }
 
-/// The <details> HTML element creates a disclosure widget in which information
-/// is visible only when the widget is toggled into an "open" state. A summary
-/// or label must be provided using the summary element.
+/// Creates a disclosure widget in which information is visible only when the
+/// widget is toggled into an "open" state. A summary or label must be provided
+/// using the <summary> element.
 DomElement<L, V> details<L, V>({
   String? key,
   List<String>? classes,
@@ -3889,10 +3204,6 @@ DomElement<L, V> details<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -3958,7 +3269,6 @@ DomElement<L, V> details<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -3985,10 +3295,10 @@ DomElement<L, V> details<L, V>({
   );
 }
 
-/// The <dfn> HTML element is used to indicate the term being defined within
-/// the context of a definition phrase or sentence. The p element, the dt/dd
-/// pairing, or the section element which is the nearest ancestor of the <dfn>
-/// is considered to be the definition of the term.
+/// Used to indicate the term being defined within the context of a definition
+/// phrase or sentence. The ancestor <p> element, the <dt>/<dd> pairing, or
+/// the nearest section ancestor of the <dfn> element, is considered to be the
+/// definition of the term.
 DomElement<L, V> dfn<L, V>({
   String? key,
   List<String>? classes,
@@ -4003,10 +3313,6 @@ DomElement<L, V> dfn<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4066,7 +3372,6 @@ DomElement<L, V> dfn<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4092,8 +3397,8 @@ DomElement<L, V> dfn<L, V>({
   );
 }
 
-/// The <dialog> HTML element represents a dialog box or other interactive component,
-/// such as a dismissible alert, inspector, or subwindow.
+/// Represents a dialog box or other interactive component, such as a dismissible
+/// alert, inspector, or subwindow.
 DomElement<L, V> dialog<L, V>({
   String? key,
   List<String>? classes,
@@ -4108,10 +3413,6 @@ DomElement<L, V> dialog<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4177,7 +3478,6 @@ DomElement<L, V> dialog<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4204,10 +3504,9 @@ DomElement<L, V> dialog<L, V>({
   );
 }
 
-/// The <dir> HTML element is used as a container for a directory of files and/or
-/// folders, potentially with styles and icons applied by the user agent. Do
-/// not use this obsolete element; instead, you should use the ul element for
-/// lists, including lists of files.
+/// Container for a directory of files and/or folders, potentially with styles
+/// and icons applied by the user agent. Do not use this obsolete element; instead,
+/// you should use the <ul> element for lists, including lists of files.
 DomElement<L, V> dir<L, V>({
   String? key,
   List<String>? classes,
@@ -4222,10 +3521,6 @@ DomElement<L, V> dir<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4285,7 +3580,6 @@ DomElement<L, V> dir<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4311,10 +3605,10 @@ DomElement<L, V> dir<L, V>({
   );
 }
 
-/// The <div> HTML element is the generic container for flow content. It has
-/// no effect on the content or layout until styled in some way using CSS (e.g.
-/// styling is directly applied to it, or some kind of layout model like Flexbox
-/// is applied to its parent element).
+/// The generic container for flow content. It has no effect on the content
+/// or layout until styled in some way using CSS (e.g., styling is directly
+/// applied to it, or some kind of layout model like flexbox is applied to its
+/// parent element).
 DomElement<L, V> div<L, V>({
   String? key,
   List<String>? classes,
@@ -4329,10 +3623,6 @@ DomElement<L, V> div<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4392,7 +3682,6 @@ DomElement<L, V> div<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4418,10 +3707,10 @@ DomElement<L, V> div<L, V>({
   );
 }
 
-/// The <dl> HTML element represents a description list. The element encloses
-/// a list of groups of terms (specified using the dt element) and descriptions
-/// (provided by dd elements). Common uses for this element are to implement
-/// a glossary or to display metadata (a list of key-value pairs).
+/// Represents a description list. The element encloses a list of groups of
+/// terms (specified using the <dt> element) and descriptions (provided by <dd>
+/// elements). Common uses for this element are to implement a glossary or to
+/// display metadata (a list of key-value pairs).
 DomElement<L, V> dl<L, V>({
   String? key,
   List<String>? classes,
@@ -4436,10 +3725,6 @@ DomElement<L, V> dl<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4499,7 +3784,6 @@ DomElement<L, V> dl<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4525,10 +3809,10 @@ DomElement<L, V> dl<L, V>({
   );
 }
 
-/// The <dt> HTML element specifies a term in a description or definition list,
-/// and as such must be used inside a dl element. It is usually followed by
-/// a dd element; however, multiple <dt> elements in a row indicate several
-/// terms that are all defined by the immediate next dd element.
+/// Specifies a term in a description or definition list, and as such must be
+/// used inside a <dl> element. It is usually followed by a <dd> element; however,
+/// multiple <dt> elements in a row indicate several terms that are all defined
+/// by the immediate next <dd> element.
 DomElement<L, V> dt<L, V>({
   String? key,
   List<String>? classes,
@@ -4543,10 +3827,6 @@ DomElement<L, V> dt<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4606,7 +3886,6 @@ DomElement<L, V> dt<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4632,9 +3911,8 @@ DomElement<L, V> dt<L, V>({
   );
 }
 
-/// The <em> HTML element marks text that has stress emphasis. The <em> element
-/// can be nested, with each level of nesting indicating a greater degree of
-/// emphasis.
+/// Marks text that has stress emphasis. The <em> element can be nested, with
+/// each nesting level indicating a greater degree of emphasis.
 DomElement<L, V> em<L, V>({
   String? key,
   List<String>? classes,
@@ -4649,10 +3927,6 @@ DomElement<L, V> em<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4712,7 +3986,6 @@ DomElement<L, V> em<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -4738,9 +4011,9 @@ DomElement<L, V> em<L, V>({
   );
 }
 
-/// The <embed> HTML element embeds external content at the specified point
-/// in the document. This content is provided by an external application or
-/// other source of interactive content such as a browser plug-in.
+/// Embeds external content at the specified point in the document. This content
+/// is provided by an external application or other source of interactive content
+/// such as a browser plug-in.
 DomElement<L, V> embed<L, V>({
   String? key,
   List<String>? classes,
@@ -4755,10 +4028,6 @@ DomElement<L, V> embed<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4844,7 +4113,6 @@ DomElement<L, V> embed<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (height != null) 'height': height,
@@ -4874,8 +4142,8 @@ DomElement<L, V> embed<L, V>({
   );
 }
 
-/// The <fieldset> HTML element is used to group several controls as well as
-/// labels (label) within a web form.
+/// Used to group several controls as well as labels (<label>) within a web
+/// form.
 DomElement<L, V> fieldset<L, V>({
   String? key,
   List<String>? classes,
@@ -4890,10 +4158,6 @@ DomElement<L, V> fieldset<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -4963,7 +4227,6 @@ DomElement<L, V> fieldset<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (disabled ?? false) 'disabled': 'disabled',
       if (draggable != null) 'draggable': draggable,
@@ -4992,8 +4255,8 @@ DomElement<L, V> fieldset<L, V>({
   );
 }
 
-/// The <figcaption> HTML element represents a caption or legend describing
-/// the rest of the contents of its parent figure element.
+/// Represents a caption or legend describing the rest of the contents of its
+/// parent <figure> element.
 DomElement<L, V> figcaption<L, V>({
   String? key,
   List<String>? classes,
@@ -5008,10 +4271,6 @@ DomElement<L, V> figcaption<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5071,7 +4330,6 @@ DomElement<L, V> figcaption<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5097,9 +4355,9 @@ DomElement<L, V> figcaption<L, V>({
   );
 }
 
-/// The <figure> HTML element represents self-contained content, potentially
-/// with an optional caption, which is specified using the figcaption element.
-/// The figure, its caption, and its contents are referenced as a single unit.
+/// Represents self-contained content, potentially with an optional caption,
+/// which is specified using the <figcaption> element. The figure, its caption,
+/// and its contents are referenced as a single unit.
 DomElement<L, V> figure<L, V>({
   String? key,
   List<String>? classes,
@@ -5114,10 +4372,6 @@ DomElement<L, V> figure<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5177,7 +4431,6 @@ DomElement<L, V> figure<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5203,7 +4456,7 @@ DomElement<L, V> figure<L, V>({
   );
 }
 
-/// The <font> HTML element defines the font size, color and face for its content.
+/// Defines the font size, color and face for its content.
 DomElement<L, V> font<L, V>({
   String? key,
   List<String>? classes,
@@ -5227,10 +4480,6 @@ DomElement<L, V> font<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5291,7 +4540,6 @@ DomElement<L, V> font<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (color != null) 'color': color,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5317,9 +4565,9 @@ DomElement<L, V> font<L, V>({
   );
 }
 
-/// The <footer> HTML element represents a footer for its nearest ancestor sectioning
-/// content or sectioning root element. A <footer> typically contains information
-/// about the author of the section, copyright data or links to related documents.
+/// Represents a footer for its nearest ancestor sectioning content or sectioning
+/// root element. A <footer> typically contains information about the author
+/// of the section, copyright data, or links to related documents.
 DomElement<L, V> footer<L, V>({
   String? key,
   List<String>? classes,
@@ -5334,10 +4582,6 @@ DomElement<L, V> footer<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5397,7 +4641,6 @@ DomElement<L, V> footer<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5423,8 +4666,8 @@ DomElement<L, V> footer<L, V>({
   );
 }
 
-/// The <form> HTML element represents a document section containing interactive
-/// controls for submitting information.
+/// Represents a document section containing interactive controls for submitting
+/// information.
 DomElement<L, V> form<L, V>({
   String? key,
   List<String>? classes,
@@ -5453,10 +4696,6 @@ DomElement<L, V> form<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5542,7 +4781,6 @@ DomElement<L, V> form<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autocomplete != null) 'autocomplete': autocomplete,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (enctype != null) 'enctype': enctype,
@@ -5573,8 +4811,8 @@ DomElement<L, V> form<L, V>({
   );
 }
 
-/// The <frame> HTML element defines a particular area in which another HTML
-/// document can be displayed. A frame should be used within a frameset.
+/// Defines a particular area in which another HTML document can be displayed.
+/// A frame should be used within a <frameset>.
 DomElement<L, V> frame<L, V>({
   String? key,
   List<String>? classes,
@@ -5589,10 +4827,6 @@ DomElement<L, V> frame<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5652,7 +4886,6 @@ DomElement<L, V> frame<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5678,7 +4911,7 @@ DomElement<L, V> frame<L, V>({
   );
 }
 
-/// The <frameset> HTML element is used to contain frame elements.
+/// Used to contain <frame> elements.
 DomElement<L, V> frameset<L, V>({
   String? key,
   List<String>? classes,
@@ -5693,10 +4926,6 @@ DomElement<L, V> frameset<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5756,7 +4985,6 @@ DomElement<L, V> frameset<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5782,8 +5010,8 @@ DomElement<L, V> frameset<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h1<L, V>({
   String? key,
   List<String>? classes,
@@ -5798,10 +5026,6 @@ DomElement<L, V> h1<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5861,7 +5085,6 @@ DomElement<L, V> h1<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5887,8 +5110,8 @@ DomElement<L, V> h1<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h2<L, V>({
   String? key,
   List<String>? classes,
@@ -5903,10 +5126,6 @@ DomElement<L, V> h2<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -5966,7 +5185,6 @@ DomElement<L, V> h2<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -5992,8 +5210,8 @@ DomElement<L, V> h2<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h3<L, V>({
   String? key,
   List<String>? classes,
@@ -6008,10 +5226,6 @@ DomElement<L, V> h3<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6071,7 +5285,6 @@ DomElement<L, V> h3<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6097,8 +5310,8 @@ DomElement<L, V> h3<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h4<L, V>({
   String? key,
   List<String>? classes,
@@ -6113,10 +5326,6 @@ DomElement<L, V> h4<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6176,7 +5385,6 @@ DomElement<L, V> h4<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6202,8 +5410,8 @@ DomElement<L, V> h4<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h5<L, V>({
   String? key,
   List<String>? classes,
@@ -6218,10 +5426,6 @@ DomElement<L, V> h5<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6281,7 +5485,6 @@ DomElement<L, V> h5<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6307,8 +5510,8 @@ DomElement<L, V> h5<L, V>({
   );
 }
 
-/// The <h1> to <h6> HTML elements represent six levels of section headings.
-/// <h1> is the highest section level and <h6> is the lowest.
+/// Represent six levels of section headings. <h1> is the highest section level
+/// and <h6> is the lowest.
 DomElement<L, V> h6<L, V>({
   String? key,
   List<String>? classes,
@@ -6323,10 +5526,6 @@ DomElement<L, V> h6<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6386,7 +5585,6 @@ DomElement<L, V> h6<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6412,8 +5610,8 @@ DomElement<L, V> h6<L, V>({
   );
 }
 
-/// The <head> HTML element contains machine-readable information (metadata)
-/// about the document, like its title, scripts, and style sheets.
+/// Contains machine-readable information (metadata) about the document, like
+/// its title, scripts, and style sheets.
 DomElement<L, V> head<L, V>({
   String? key,
   List<String>? classes,
@@ -6428,10 +5626,6 @@ DomElement<L, V> head<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6491,7 +5685,6 @@ DomElement<L, V> head<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6517,9 +5710,9 @@ DomElement<L, V> head<L, V>({
   );
 }
 
-/// The <header> HTML element represents introductory content, typically a group
-/// of introductory or navigational aids. It may contain some heading elements
-/// but also a logo, a search form, an author name, and other elements.
+/// Represents introductory content, typically a group of introductory or navigational
+/// aids. It may contain some heading elements but also a logo, a search form,
+/// an author name, and other elements.
 DomElement<L, V> header<L, V>({
   String? key,
   List<String>? classes,
@@ -6534,10 +5727,6 @@ DomElement<L, V> header<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6597,7 +5786,6 @@ DomElement<L, V> header<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6623,8 +5811,8 @@ DomElement<L, V> header<L, V>({
   );
 }
 
-/// The <hgroup> HTML element represents a multi-level heading for a section
-/// of a document. It groups a set of <h1>–<h6> elements.
+/// Represents a heading grouped with any secondary content, such as subheadings,
+/// an alternative title, or a tagline.
 DomElement<L, V> hgroup<L, V>({
   String? key,
   List<String>? classes,
@@ -6639,10 +5827,6 @@ DomElement<L, V> hgroup<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6702,7 +5886,6 @@ DomElement<L, V> hgroup<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6728,9 +5911,8 @@ DomElement<L, V> hgroup<L, V>({
   );
 }
 
-/// The <hr> HTML element represents a thematic break between paragraph-level
-/// elements: for example, a change of scene in a story, or a shift of topic
-/// within a section.
+/// Represents a thematic break between paragraph-level elements: for example,
+/// a change of scene in a story, or a shift of topic within a section.
 DomElement<L, V> hr<L, V>({
   String? key,
   List<String>? classes,
@@ -6739,9 +5921,6 @@ DomElement<L, V> hr<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -6757,10 +5936,6 @@ DomElement<L, V> hr<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6818,11 +5993,9 @@ DomElement<L, V> hr<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (color != null) 'color': color,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6848,9 +6021,9 @@ DomElement<L, V> hr<L, V>({
   );
 }
 
-/// The <html> HTML element represents the root (top-level element) of an HTML
-/// document, so it is also referred to as the root element. All other elements
-/// must be descendants of this element.
+/// Represents the root (top-level element) of an HTML document, so it is also
+/// referred to as the root element. All other elements must be descendants
+/// of this element.
 DomElement<L, V> html<L, V>({
   String? key,
   List<String>? classes,
@@ -6865,10 +6038,6 @@ DomElement<L, V> html<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -6928,7 +6097,6 @@ DomElement<L, V> html<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -6954,11 +6122,10 @@ DomElement<L, V> html<L, V>({
   );
 }
 
-/// The <i> HTML element represents a range of text that is set off from the
-/// normal text for some reason, such as idiomatic text, technical terms, taxonomical
-/// designations, among others. Historically, these have been presented using
-/// italicized type, which is the original source of the <i> naming of this
-/// element.
+/// Represents a range of text that is set off from the normal text for some
+/// reason, such as idiomatic text, technical terms, and taxonomical designations,
+/// among others. Historically, these have been presented using italicized type,
+/// which is the original source of the <i> naming of this element.
 DomElement<L, V> i<L, V>({
   String? key,
   List<String>? classes,
@@ -6973,10 +6140,6 @@ DomElement<L, V> i<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -7036,7 +6199,6 @@ DomElement<L, V> i<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -7062,8 +6224,8 @@ DomElement<L, V> i<L, V>({
   );
 }
 
-/// The <iframe> HTML element represents a nested browsing context, embedding
-/// another HTML page into the current one.
+/// Represents a nested browsing context, embedding another HTML page into the
+/// current one.
 DomElement<L, V> iframe<L, V>({
   String? key,
   List<String>? classes,
@@ -7073,9 +6235,6 @@ DomElement<L, V> iframe<L, V>({
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
 
-  /// Specifies the horizontal alignment of the element.
-  String? align,
-
   /// Specifies a feature-policy for the iframe.
   String? allow,
 
@@ -7084,10 +6243,6 @@ DomElement<L, V> iframe<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Specifies the Content Security Policy that an embedded document must
   /// agree to enforce upon itself.
@@ -7118,9 +6273,6 @@ DomElement<L, V> iframe<L, V>({
   /// Often used with CSS to style a specific element. The value of this
   /// attribute must be unique.
   String? id,
-
-  /// Indicates the relative fetch priority for the resource.
-  String? importance,
 
   ///
   String? itemprop,
@@ -7194,18 +6346,15 @@ DomElement<L, V> iframe<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (allow != null) 'allow': allow,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (csp != null) 'csp': csp,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (height != null) 'height': height,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
-      if (importance != null) 'importance': importance,
       if (itemprop != null) 'itemprop': itemprop,
       if (lang != null) 'lang': lang,
       if (loading != null) 'loading': loading,
@@ -7234,9 +6383,8 @@ DomElement<L, V> iframe<L, V>({
   );
 }
 
-/// The <image> HTML element is an ancient and poorly supported precursor to
-/// the img element.
-/// It should not be used.
+/// An ancient and poorly supported precursor to the <img> element. It should
+/// not be used.
 DomElement<L, V> image<L, V>({
   String? key,
   List<String>? classes,
@@ -7251,10 +6399,6 @@ DomElement<L, V> image<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -7314,7 +6458,6 @@ DomElement<L, V> image<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -7340,7 +6483,7 @@ DomElement<L, V> image<L, V>({
   );
 }
 
-/// The <img> HTML element embeds an image into the document.
+/// Embeds an image into the document.
 DomElement<L, V> img<L, V>({
   String? key,
   List<String>? classes,
@@ -7349,9 +6492,6 @@ DomElement<L, V> img<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Alternative text in case an image can't be displayed.
   String? alt,
@@ -7368,10 +6508,6 @@ DomElement<L, V> img<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// How the element handles cross-origin requests
   String? crossorigin,
@@ -7404,9 +6540,6 @@ DomElement<L, V> img<L, V>({
   /// Often used with CSS to style a specific element. The value of this
   /// attribute must be unique.
   String? id,
-
-  /// Indicates the relative fetch priority for the resource.
-  String? importance,
 
   /// Indicates that the image is part of a server-side image map.
   bool? ismap,
@@ -7481,12 +6614,10 @@ DomElement<L, V> img<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (alt != null) 'alt': alt,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (border != null) 'border': border,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (crossorigin != null) 'crossorigin': crossorigin,
       if (decoding != null) 'decoding': decoding,
       if (dir != null) 'dir': dir,
@@ -7494,7 +6625,6 @@ DomElement<L, V> img<L, V>({
       if (height != null) 'height': height,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
-      if (importance != null) 'importance': importance,
       if (ismap ?? false) 'ismap': 'ismap',
       if (itemprop != null) 'itemprop': itemprop,
       if (lang != null) 'lang': lang,
@@ -7524,12 +6654,11 @@ DomElement<L, V> img<L, V>({
   );
 }
 
-/// The <input> HTML element is used to create interactive controls for web-based
-/// forms in order to accept data from the user; a wide variety of types of
-/// input data and control widgets are available, depending on the device and
-/// user agent. The <input> element is one of the most powerful and complex
-/// in all of HTML due to the sheer number of combinations of input types and
-/// attributes.
+/// Used to create interactive controls for web-based forms to accept data from
+/// the user; a wide variety of types of input data and control widgets are
+/// available, depending on the device and user agent. The <input> element is
+/// one of the most powerful and complex in all of HTML due to the sheer number
+/// of combinations of input types and attributes.
 DomElement<L, V> input<L, V>({
   String? key,
   List<String>? classes,
@@ -7552,9 +6681,6 @@ DomElement<L, V> input<L, V>({
   /// automatically completed by the browser.
   String? autocomplete,
 
-  /// The element should be automatically focused after the page loaded.
-  bool? autofocus,
-
   /// From the Media Capture specification,
   /// specifies a new file can be captured.
   String? capture,
@@ -7564,10 +6690,6 @@ DomElement<L, V> input<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -7589,28 +6711,28 @@ DomElement<L, V> input<L, V>({
   /// the <form>.
   String? formaction,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute sets the encoding type to use during form submission. If
   /// this attribute is specified, it overrides the
   /// enctype attribute of the button's
   /// form owner.
   String? formenctype,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute sets the submission method to use during form submission
   /// (GET, POST, etc.). If this attribute is
   /// specified, it overrides the method attribute of the
   /// button's form owner.
   String? formmethod,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this boolean attribute specifies that the form is not to be validated
   /// when it is submitted. If this attribute is specified, it overrides the
   /// novalidate attribute of the button's
   /// form owner.
   bool? formnovalidate,
 
-  /// If the button/input is a submit button (type="submit"),
+  /// If the button/input is a submit button (e.g. type="submit"),
   /// this attribute specifies the browsing context (for example, tab, window,
   /// or inline frame) in which to display the response that is received after
   /// submitting the form. If this attribute is specified, it overrides the
@@ -7748,11 +6870,9 @@ DomElement<L, V> input<L, V>({
       if (alt != null) 'alt': alt,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autocomplete != null) 'autocomplete': autocomplete,
-      if (autofocus ?? false) 'autofocus': 'autofocus',
       if (capture != null) 'capture': capture,
       if (checked ?? false) 'checked': 'checked',
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (dirname != null) 'dirname': dirname,
       if (disabled ?? false) 'disabled': 'disabled',
@@ -7805,9 +6925,9 @@ DomElement<L, V> input<L, V>({
   );
 }
 
-/// The <ins> HTML element represents a range of text that has been added to
-/// a document. You can use the del element to similarly represent a range of
-/// text that has been deleted from the document.
+/// Represents a range of text that has been added to a document. You can use
+/// the <del> element to similarly represent a range of text that has been deleted
+/// from the document.
 DomElement<L, V> ins<L, V>({
   String? key,
   List<String>? classes,
@@ -7825,10 +6945,6 @@ DomElement<L, V> ins<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates the date and time associated with the element.
   String? datetime,
@@ -7892,7 +7008,6 @@ DomElement<L, V> ins<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (cite != null) 'cite': cite,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (datetime != null) 'datetime': datetime,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -7919,11 +7034,10 @@ DomElement<L, V> ins<L, V>({
   );
 }
 
-/// The <kbd> HTML element represents a span of inline text denoting textual
-/// user input from a keyboard, voice input, or any other text entry device.
-/// By convention, the user agent defaults to rendering the contents of a <kbd>
-/// element using its default monospace font, although this is not mandated
-/// by the HTML standard.
+/// Represents a span of inline text denoting textual user input from a keyboard,
+/// voice input, or any other text entry device. By convention, the user agent
+/// defaults to rendering the contents of a <kbd> element using its default
+/// monospace font, although this is not mandated by the HTML standard.
 DomElement<L, V> kbd<L, V>({
   String? key,
   List<String>? classes,
@@ -7938,10 +7052,6 @@ DomElement<L, V> kbd<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8001,7 +7111,6 @@ DomElement<L, V> kbd<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8027,141 +7136,7 @@ DomElement<L, V> kbd<L, V>({
   );
 }
 
-/// The <keygen> HTML element exists to facilitate generation of key material,
-/// and submission of the public key as part of an HTML form. This mechanism
-/// is designed for use with Web-based certificate management systems. It is
-/// expected that the <keygen> element will be used in an HTML form along with
-/// other information needed to construct a certificate request, and that the
-/// result of the process will be a signed certificate.
-DomElement<L, V> keygen<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// The element should be automatically focused after the page loaded.
-  bool? autofocus,
-
-  /// A challenge string that is submitted along with the public key.
-  String? challenge,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Indicates whether the user can interact with the element.
-  bool? disabled,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Indicates the form that is the owner of the element.
-  String? form,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Specifies the type of key generated.
-  String? keytype,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Name of the element. For example used by the server to identify the
-  /// fields in form submits.
-  String? name,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'keygen',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (autofocus ?? false) 'autofocus': 'autofocus',
-      if (challenge != null) 'challenge': challenge,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (disabled ?? false) 'disabled': 'disabled',
-      if (draggable != null) 'draggable': draggable,
-      if (form != null) 'form': form,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (keytype != null) 'keytype': keytype,
-      if (lang != null) 'lang': lang,
-      if (name != null) 'name': name,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <label> HTML element represents a caption for an item in a user interface.
+/// Represents a caption for an item in a user interface.
 DomElement<L, V> label<L, V>({
   String? key,
   List<String>? classes,
@@ -8176,10 +7151,6 @@ DomElement<L, V> label<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8245,7 +7216,6 @@ DomElement<L, V> label<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (for$ != null) 'for': for$,
@@ -8273,8 +7243,7 @@ DomElement<L, V> label<L, V>({
   );
 }
 
-/// The <legend> HTML element represents a caption for the content of its parent
-/// fieldset.
+/// Represents a caption for the content of its parent <fieldset>.
 DomElement<L, V> legend<L, V>({
   String? key,
   List<String>? classes,
@@ -8289,10 +7258,6 @@ DomElement<L, V> legend<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8352,7 +7317,6 @@ DomElement<L, V> legend<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8378,11 +7342,11 @@ DomElement<L, V> legend<L, V>({
   );
 }
 
-/// The <li> HTML element is used to represent an item in a list. It must be
-/// contained in a parent element: an ordered list (ol), an unordered list (ul),
-/// or a menu (menu). In menus and unordered lists, list items are usually displayed
-/// using bullet points. In ordered lists, they are usually displayed with an
-/// ascending counter on the left, such as a number or letter.
+/// Represents an item in a list. It must be contained in a parent element:
+/// an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In
+/// menus and unordered lists, list items are usually displayed using bullet
+/// points. In ordered lists, they are usually displayed with an ascending counter
+/// on the left, such as a number or letter.
 DomElement<L, V> li<L, V>({
   String? key,
   List<String>? classes,
@@ -8397,10 +7361,6 @@ DomElement<L, V> li<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8464,7 +7424,6 @@ DomElement<L, V> li<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8491,9 +7450,8 @@ DomElement<L, V> li<L, V>({
   );
 }
 
-/// The <link> HTML element specifies relationships between the current document
-/// and an external resource.
-/// This element is most commonly used to link to CSS, but is also used to establish
+/// Specifies relationships between the current document and an external resource.
+/// This element is most commonly used to link to CSS but is also used to establish
 /// site icons (both "favicon" style icons and icons for the home screen and
 /// apps on mobile devices) among other things.
 DomElement<L, V> link<L, V>({
@@ -8505,15 +7463,14 @@ DomElement<L, V> link<L, V>({
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
 
+  /// Specifies the type of content being loaded by the link.
+  String? as,
+
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// How the element handles cross-origin requests
   String? crossorigin,
@@ -8538,9 +7495,6 @@ DomElement<L, V> link<L, V>({
   /// Often used with CSS to style a specific element. The value of this
   /// attribute must be unique.
   String? id,
-
-  /// Indicates the relative fetch priority for the resource.
-  String? importance,
 
   /// Specifies a
   /// Subresource Integrity
@@ -8604,9 +7558,9 @@ DomElement<L, V> link<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
+      if (as != null) 'as': as,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (crossorigin != null) 'crossorigin': crossorigin,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -8614,7 +7568,6 @@ DomElement<L, V> link<L, V>({
       if (href != null) 'href': href,
       if (hreflang != null) 'hreflang': hreflang,
       if (id != null) 'id': id,
-      if (importance != null) 'importance': importance,
       if (integrity != null) 'integrity': integrity,
       if (itemprop != null) 'itemprop': itemprop,
       if (lang != null) 'lang': lang,
@@ -8642,10 +7595,9 @@ DomElement<L, V> link<L, V>({
   );
 }
 
-/// The <main> HTML element represents the dominant content of the body of a
-/// document. The main content area consists of content that is directly related
-/// to or expands upon the central topic of a document, or the central functionality
-/// of an application.
+/// Represents the dominant content of the body of a document. The main content
+/// area consists of content that is directly related to or expands upon the
+/// central topic of a document, or the central functionality of an application.
 DomElement<L, V> main<L, V>({
   String? key,
   List<String>? classes,
@@ -8660,10 +7612,6 @@ DomElement<L, V> main<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8723,7 +7671,6 @@ DomElement<L, V> main<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8749,8 +7696,7 @@ DomElement<L, V> main<L, V>({
   );
 }
 
-/// The <map> HTML element is used with area elements to define an image map
-/// (a clickable link area).
+/// Used with <area> elements to define an image map (a clickable link area).
 DomElement<L, V> map<L, V>({
   String? key,
   List<String>? classes,
@@ -8765,10 +7711,6 @@ DomElement<L, V> map<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8832,7 +7774,6 @@ DomElement<L, V> map<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8859,9 +7800,8 @@ DomElement<L, V> map<L, V>({
   );
 }
 
-/// The <mark> HTML element represents text which is marked or highlighted for
-/// reference or notation purposes, due to the marked passage's relevance or
-/// importance in the enclosing context.
+/// Represents text which is marked or highlighted for reference or notation
+/// purposes due to the marked passage's relevance in the enclosing context.
 DomElement<L, V> mark<L, V>({
   String? key,
   List<String>? classes,
@@ -8876,10 +7816,6 @@ DomElement<L, V> mark<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -8939,7 +7875,6 @@ DomElement<L, V> mark<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -8965,9 +7900,8 @@ DomElement<L, V> mark<L, V>({
   );
 }
 
-/// The <marquee> HTML element is used to insert a scrolling area of text. You
-/// can control what happens when the text reaches the edges of its content
-/// area using its attributes.
+/// Used to insert a scrolling area of text. You can control what happens when
+/// the text reaches the edges of its content area using its attributes.
 DomElement<L, V> marquee<L, V>({
   String? key,
   List<String>? classes,
@@ -8989,10 +7923,6 @@ DomElement<L, V> marquee<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9057,7 +7987,6 @@ DomElement<L, V> marquee<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9084,11 +8013,9 @@ DomElement<L, V> marquee<L, V>({
   );
 }
 
-/// The top-level element in MathML is <math>. Every valid
-/// MathML instance must be wrapped in <math> tags. In
-/// addition you must not nest a second <math> element in
-/// another, but you can have an arbitrary number of other child elements in
-/// it.
+/// The top-level element in MathML. Every valid MathML instance must be wrapped
+/// in it. In addition, you must not nest a second <math> element in another,
+/// but you can have an arbitrary number of other child elements in it.
 DomElement<L, V> math<L, V>({
   String? key,
   List<String>? classes,
@@ -9103,10 +8030,6 @@ DomElement<L, V> math<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9166,7 +8089,6 @@ DomElement<L, V> math<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9192,9 +8114,9 @@ DomElement<L, V> math<L, V>({
   );
 }
 
-/// The <menu> HTML element is a semantic alternative to ul. It represents an
-/// unordered list of items (represented by li elements), each of which represents
-/// a link or other command that the user can activate.
+/// A semantic alternative to <ul>, but treated by browsers (and exposed through
+/// the accessibility tree) as no different than <ul>. It represents an unordered
+/// list of items (which are represented by <li> elements).
 DomElement<L, V> menu<L, V>({
   String? key,
   List<String>? classes,
@@ -9209,10 +8131,6 @@ DomElement<L, V> menu<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9275,7 +8193,6 @@ DomElement<L, V> menu<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9302,9 +8219,9 @@ DomElement<L, V> menu<L, V>({
   );
 }
 
-/// The <menuitem> HTML element represents a command that a user is able to
-/// invoke through a popup menu. This includes context menus, as well as menus
-/// that might be attached to a menu button.
+/// Represents a command that a user is able to invoke through a popup menu.
+/// This includes context menus, as well as menus that might be attached to
+/// a menu button.
 DomElement<L, V> menuitem<L, V>({
   String? key,
   List<String>? classes,
@@ -9319,10 +8236,6 @@ DomElement<L, V> menuitem<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9382,7 +8295,6 @@ DomElement<L, V> menuitem<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9408,8 +8320,8 @@ DomElement<L, V> menuitem<L, V>({
   );
 }
 
-/// The <meta> HTML element represents Metadata that cannot be represented by
-/// other HTML meta-related elements, like base, link, script, style or title.
+/// Represents metadata that cannot be represented by other HTML meta-related
+/// elements, like <base>, <link>, <script>, <style> and <title>.
 DomElement<L, V> meta<L, V>({
   String? key,
   List<String>? classes,
@@ -9431,10 +8343,6 @@ DomElement<L, V> meta<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9503,7 +8411,6 @@ DomElement<L, V> meta<L, V>({
       if (charset != null) 'charset': charset,
       if (content != null) 'content': content,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9531,8 +8438,7 @@ DomElement<L, V> meta<L, V>({
   );
 }
 
-/// The <meter> HTML element represents either a scalar value within a known
-/// range or a fractional value.
+/// Represents either a scalar value within a known range or a fractional value.
 DomElement<L, V> meter<L, V>({
   String? key,
   List<String>? classes,
@@ -9547,10 +8453,6 @@ DomElement<L, V> meter<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9632,7 +8534,6 @@ DomElement<L, V> meter<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (form != null) 'form': form,
@@ -9665,10 +8566,9 @@ DomElement<L, V> meter<L, V>({
   );
 }
 
-/// The <nav> HTML element represents a section of a page whose purpose is to
-/// provide navigation links, either within the current document or to other
-/// documents. Common examples of navigation sections are menus, tables of contents,
-/// and indexes.
+/// Represents a section of a page whose purpose is to provide navigation links,
+/// either within the current document or to other documents. Common examples
+/// of navigation sections are menus, tables of contents, and indexes.
 DomElement<L, V> nav<L, V>({
   String? key,
   List<String>? classes,
@@ -9683,10 +8583,6 @@ DomElement<L, V> nav<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9746,7 +8642,6 @@ DomElement<L, V> nav<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9772,9 +8667,9 @@ DomElement<L, V> nav<L, V>({
   );
 }
 
-/// The <nobr> HTML element prevents the text it contains from automatically
-/// wrapping across multiple lines, potentially resulting in the user having
-/// to scroll horizontally to see the entire width of the text.
+/// Prevents the text it contains from automatically wrapping across multiple
+/// lines, potentially resulting in the user having to scroll horizontally to
+/// see the entire width of the text.
 DomElement<L, V> nobr<L, V>({
   String? key,
   List<String>? classes,
@@ -9789,10 +8684,6 @@ DomElement<L, V> nobr<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9852,7 +8743,6 @@ DomElement<L, V> nobr<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9878,11 +8768,11 @@ DomElement<L, V> nobr<L, V>({
   );
 }
 
-/// The <noembed> HTML element is an obsolete, non-standard way to provide alternative,
-/// or "fallback", content for browsers that do not support the embed element
-/// or do not support the type of embedded content an author wishes to use.
-/// This element was deprecated in HTML 4.01 and above in favor of placing fallback
-/// content between the opening and closing tags of an object element.
+/// An obsolete, non-standard way to provide alternative, or "fallback", content
+/// for browsers that do not support the embed element or do not support the
+/// type of embedded content an author wishes to use. This element was deprecated
+/// in HTML 4.01 and above in favor of placing fallback content between the
+/// opening and closing tags of an <object> element.
 DomElement<L, V> noembed<L, V>({
   String? key,
   List<String>? classes,
@@ -9897,10 +8787,6 @@ DomElement<L, V> noembed<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -9960,7 +8846,6 @@ DomElement<L, V> noembed<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -9986,11 +8871,10 @@ DomElement<L, V> noembed<L, V>({
   );
 }
 
-/// The <noframes> HTML element provides content to be presented in browsers
-/// that don't support (or have disabled support for) the frame element. Although
-/// most commonly-used browsers support frames, there are exceptions, including
-/// certain special-use browsers including some mobile browsers, as well as
-/// text-mode browsers.
+/// Provides content to be presented in browsers that don't support (or have
+/// disabled support for) the <frame> element. Although most commonly-used browsers
+/// support frames, there are exceptions, including certain special-use browsers
+/// including some mobile browsers, as well as text-mode browsers.
 DomElement<L, V> noframes<L, V>({
   String? key,
   List<String>? classes,
@@ -10005,10 +8889,6 @@ DomElement<L, V> noframes<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10068,7 +8948,6 @@ DomElement<L, V> noframes<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -10094,9 +8973,8 @@ DomElement<L, V> noframes<L, V>({
   );
 }
 
-/// The <noscript> HTML element defines a section of HTML to be inserted if
-/// a script type on the page is unsupported or if scripting is currently turned
-/// off in the browser.
+/// Defines a section of HTML to be inserted if a script type on the page is
+/// unsupported or if scripting is currently turned off in the browser.
 DomElement<L, V> noscript<L, V>({
   String? key,
   List<String>? classes,
@@ -10111,10 +8989,6 @@ DomElement<L, V> noscript<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10174,7 +9048,6 @@ DomElement<L, V> noscript<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -10200,9 +9073,8 @@ DomElement<L, V> noscript<L, V>({
   );
 }
 
-/// The <object> HTML element represents an external resource, which can be
-/// treated as an image, a nested browsing context, or a resource to be handled
-/// by a plugin.
+/// Represents an external resource, which can be treated as an image, a nested
+/// browsing context, or a resource to be handled by a plugin.
 DomElement<L, V> object<L, V>({
   String? key,
   List<String>? classes,
@@ -10224,10 +9096,6 @@ DomElement<L, V> object<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Specifies the URL of the resource.
   String? data,
@@ -10324,7 +9192,6 @@ DomElement<L, V> object<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (border != null) 'border': border,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (data != null) 'data': data,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -10357,8 +9224,8 @@ DomElement<L, V> object<L, V>({
   );
 }
 
-/// The <ol> HTML element represents an ordered list of items — typically rendered
-/// as a numbered list.
+/// Represents an ordered list of items â typically rendered as a numbered
+/// list.
 DomElement<L, V> ol<L, V>({
   String? key,
   List<String>? classes,
@@ -10373,10 +9240,6 @@ DomElement<L, V> ol<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10400,7 +9263,7 @@ DomElement<L, V> ol<L, V>({
   String? lang,
 
   /// Indicates whether the list should be displayed in a descending order
-  /// instead of a ascending.
+  /// instead of an ascending order.
   bool? reversed,
 
   /// Defines an explicit role for an element for use by assistive technologies.
@@ -10427,6 +9290,9 @@ DomElement<L, V> ol<L, V>({
   /// children are to be translated when the page is localized, or whether to
   /// leave them unchanged.
   String? translate,
+
+  /// Defines the type of the element.
+  String? type,
   Map<String, DomEventFn<L, V>>? events,
   DomLifecycleEventFn<L>? onCreate,
   DomLifecycleEventFn<L>? onUpdate,
@@ -10443,7 +9309,6 @@ DomElement<L, V> ol<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -10458,6 +9323,7 @@ DomElement<L, V> ol<L, V>({
       if (tabindex != null) 'tabindex': tabindex,
       if (title != null) 'title': title,
       if (translate != null) 'translate': translate,
+      if (type != null) 'type': type,
       ...?attributes,
     },
     styles: styles,
@@ -10471,8 +9337,7 @@ DomElement<L, V> ol<L, V>({
   );
 }
 
-/// The <optgroup> HTML element creates a grouping of options within a select
-/// element.
+/// Creates a grouping of options within a <select> element.
 DomElement<L, V> optgroup<L, V>({
   String? key,
   List<String>? classes,
@@ -10487,10 +9352,6 @@ DomElement<L, V> optgroup<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10556,7 +9417,6 @@ DomElement<L, V> optgroup<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (disabled ?? false) 'disabled': 'disabled',
       if (draggable != null) 'draggable': draggable,
@@ -10584,9 +9444,9 @@ DomElement<L, V> optgroup<L, V>({
   );
 }
 
-/// The <option> HTML element is used to define an item contained in a select,
-/// an optgroup, or a datalist element. As such, <option> can represent menu
-/// items in popups and other lists of items in an HTML document.
+/// Used to define an item contained in a select, an <optgroup>, or a <datalist>
+/// element. As such, <option> can represent menu items in popups and other
+/// lists of items in an HTML document.
 DomElement<L, V> option<L, V>({
   String? key,
   List<String>? classes,
@@ -10601,10 +9461,6 @@ DomElement<L, V> option<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10677,7 +9533,6 @@ DomElement<L, V> option<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (disabled ?? false) 'disabled': 'disabled',
       if (draggable != null) 'draggable': draggable,
@@ -10707,8 +9562,8 @@ DomElement<L, V> option<L, V>({
   );
 }
 
-/// The <output> HTML element is a container element into which a site or app
-/// can inject the results of a calculation or the outcome of a user action.
+/// Container element into which a site or app can inject the results of a calculation
+/// or the outcome of a user action.
 DomElement<L, V> output<L, V>({
   String? key,
   List<String>? classes,
@@ -10723,10 +9578,6 @@ DomElement<L, V> output<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10796,7 +9647,6 @@ DomElement<L, V> output<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (for$ != null) 'for': for$,
@@ -10825,10 +9675,10 @@ DomElement<L, V> output<L, V>({
   );
 }
 
-/// The <p> HTML element represents a paragraph. Paragraphs are usually represented
-/// in visual media as blocks of text separated from adjacent blocks by blank
-/// lines and/or first-line indentation, but HTML paragraphs can be any structural
-/// grouping of related content, such as images or form fields.
+/// Represents a paragraph. Paragraphs are usually represented in visual media
+/// as blocks of text separated from adjacent blocks by blank lines and/or first-line
+/// indentation, but HTML paragraphs can be any structural grouping of related
+/// content, such as images or form fields.
 DomElement<L, V> p<L, V>({
   String? key,
   List<String>? classes,
@@ -10843,10 +9693,6 @@ DomElement<L, V> p<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -10906,7 +9752,6 @@ DomElement<L, V> p<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -10932,7 +9777,7 @@ DomElement<L, V> p<L, V>({
   );
 }
 
-/// The <param> HTML element defines parameters for an object element.
+/// Defines parameters for an <object> element.
 DomElement<L, V> param<L, V>({
   String? key,
   List<String>? classes,
@@ -10947,10 +9792,6 @@ DomElement<L, V> param<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11018,7 +9859,6 @@ DomElement<L, V> param<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11046,9 +9886,8 @@ DomElement<L, V> param<L, V>({
   );
 }
 
-/// The <picture> HTML element contains zero or more source elements and one
-/// img element to offer alternative versions of an image for different display/device
-/// scenarios.
+/// Contains zero or more <source> elements and one <img> element to offer alternative
+/// versions of an image for different display/device scenarios.
 DomElement<L, V> picture<L, V>({
   String? key,
   List<String>? classes,
@@ -11063,10 +9902,6 @@ DomElement<L, V> picture<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11126,7 +9961,6 @@ DomElement<L, V> picture<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11152,9 +9986,9 @@ DomElement<L, V> picture<L, V>({
   );
 }
 
-/// The <plaintext> HTML element renders everything following the start tag
-/// as raw text, ignoring any following HTML. There is no closing tag, since
-/// everything after it is considered raw text.
+/// Renders everything following the start tag as raw text, ignoring any following
+/// HTML. There is no closing tag, since everything after it is considered raw
+/// text.
 DomElement<L, V> plaintext<L, V>({
   String? key,
   List<String>? classes,
@@ -11169,10 +10003,6 @@ DomElement<L, V> plaintext<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11232,7 +10062,6 @@ DomElement<L, V> plaintext<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11258,9 +10087,8 @@ DomElement<L, V> plaintext<L, V>({
   );
 }
 
-/// The <portal> HTML element enables the embedding of another HTML page into
-/// the current one for the purposes of allowing smoother navigation into new
-/// pages.
+/// Enables the embedding of another HTML page into the current one to enable
+/// smoother navigation into new pages.
 DomElement<L, V> portal<L, V>({
   String? key,
   List<String>? classes,
@@ -11275,10 +10103,6 @@ DomElement<L, V> portal<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11338,7 +10162,6 @@ DomElement<L, V> portal<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11364,10 +10187,9 @@ DomElement<L, V> portal<L, V>({
   );
 }
 
-/// The <pre> HTML element represents preformatted text which is to be presented
-/// exactly as written in the HTML file. The text is typically rendered using
-/// a non-proportional, or monospaced, font. Whitespace inside this element
-/// is displayed as written.
+/// Represents preformatted text which is to be presented exactly as written
+/// in the HTML file. The text is typically rendered using a non-proportional,
+/// or monospaced, font. Whitespace inside this element is displayed as written.
 DomElement<L, V> pre<L, V>({
   String? key,
   List<String>? classes,
@@ -11382,10 +10204,6 @@ DomElement<L, V> pre<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11445,7 +10263,6 @@ DomElement<L, V> pre<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11471,8 +10288,8 @@ DomElement<L, V> pre<L, V>({
   );
 }
 
-/// The <progress> HTML element displays an indicator showing the completion
-/// progress of a task, typically displayed as a progress bar.
+/// Displays an indicator showing the completion progress of a task, typically
+/// displayed as a progress bar.
 DomElement<L, V> progress<L, V>({
   String? key,
   List<String>? classes,
@@ -11487,10 +10304,6 @@ DomElement<L, V> progress<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11560,7 +10373,6 @@ DomElement<L, V> progress<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (form != null) 'form': form,
@@ -11589,10 +10401,10 @@ DomElement<L, V> progress<L, V>({
   );
 }
 
-/// The <q> HTML element indicates that the enclosed text is a short inline
-/// quotation. Most modern browsers implement this by surrounding the text in
-/// quotation marks. This element is intended for short quotations that don't
-/// require paragraph breaks; for long quotations use the blockquote element.
+/// Indicates that the enclosed text is a short inline quotation. Most modern
+/// browsers implement this by surrounding the text in quotation marks. This
+/// element is intended for short quotations that don't require paragraph breaks;
+/// for long quotations use the <blockquote> element.
 DomElement<L, V> q<L, V>({
   String? key,
   List<String>? classes,
@@ -11610,10 +10422,6 @@ DomElement<L, V> q<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11674,7 +10482,6 @@ DomElement<L, V> q<L, V>({
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (cite != null) 'cite': cite,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11700,9 +10507,9 @@ DomElement<L, V> q<L, V>({
   );
 }
 
-/// The <rb> HTML element is used to delimit the base text component of a ruby
-/// annotation, i.e. the text that is being annotated. One <rb> element should
-/// wrap each separate atomic segment of the base text.
+/// Used to delimit the base text component of a ruby annotation, i.e. the text
+/// that is being annotated. One <rb> element should wrap each separate atomic
+/// segment of the base text.
 DomElement<L, V> rb<L, V>({
   String? key,
   List<String>? classes,
@@ -11717,10 +10524,6 @@ DomElement<L, V> rb<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11780,7 +10583,6 @@ DomElement<L, V> rb<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11806,10 +10608,10 @@ DomElement<L, V> rb<L, V>({
   );
 }
 
-/// The <rp> HTML element is used to provide fall-back parentheses for browsers
-/// that do not support display of ruby annotations using the ruby element.
-/// One <rp> element should enclose each of the opening and closing parentheses
-/// that wrap the rt element that contains the annotation's text.
+/// Used to provide fall-back parentheses for browsers that do not support the
+/// display of ruby annotations using the <ruby> element. One <rp> element should
+/// enclose each of the opening and closing parentheses that wrap the <rt> element
+/// that contains the annotation's text.
 DomElement<L, V> rp<L, V>({
   String? key,
   List<String>? classes,
@@ -11824,10 +10626,6 @@ DomElement<L, V> rp<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11887,7 +10685,6 @@ DomElement<L, V> rp<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -11913,10 +10710,10 @@ DomElement<L, V> rp<L, V>({
   );
 }
 
-/// The <rt> HTML element specifies the ruby text component of a ruby annotation,
-/// which is used to provide pronunciation, translation, or transliteration
-/// information for East Asian typography. The <rt> element must always be contained
-/// within a ruby element.
+/// Specifies the ruby text component of a ruby annotation, which is used to
+/// provide pronunciation, translation, or transliteration information for East
+/// Asian typography. The <rt> element must always be contained within a <ruby>
+/// element.
 DomElement<L, V> rt<L, V>({
   String? key,
   List<String>? classes,
@@ -11931,10 +10728,6 @@ DomElement<L, V> rt<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -11994,7 +10787,6 @@ DomElement<L, V> rt<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12020,9 +10812,9 @@ DomElement<L, V> rt<L, V>({
   );
 }
 
-/// The <rtc> HTML element embraces semantic annotations of characters presented
-/// in a ruby of rb elements used inside of ruby element. rb elements can have
-/// both pronunciation (rt) and semantic (rtc) annotations.
+/// Embraces semantic annotations of characters presented in a ruby of <rb>
+/// elements used inside of <ruby> element. <rb> elements can have both pronunciation
+/// (<rt>) and semantic (<rtc>) annotations.
 DomElement<L, V> rtc<L, V>({
   String? key,
   List<String>? classes,
@@ -12037,10 +10829,6 @@ DomElement<L, V> rtc<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12100,7 +10888,6 @@ DomElement<L, V> rtc<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12126,10 +10913,10 @@ DomElement<L, V> rtc<L, V>({
   );
 }
 
-/// The <ruby> HTML element represents small annotations that are rendered above,
-/// below, or next to base text, usually used for showing the pronunciation
-/// of East Asian characters. It can also be used for annotating other kinds
-/// of text, but this usage is less common.
+/// Represents small annotations that are rendered above, below, or next to
+/// base text, usually used for showing the pronunciation of East Asian characters.
+/// It can also be used for annotating other kinds of text, but this usage is
+/// less common.
 DomElement<L, V> ruby<L, V>({
   String? key,
   List<String>? classes,
@@ -12144,10 +10931,6 @@ DomElement<L, V> ruby<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12207,7 +10990,6 @@ DomElement<L, V> ruby<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12233,10 +11015,10 @@ DomElement<L, V> ruby<L, V>({
   );
 }
 
-/// The <s> HTML element renders text with a strikethrough, or a line through
-/// it. Use the <s> element to represent things that are no longer relevant
-/// or no longer accurate. However, <s> is not appropriate when indicating document
-/// edits; for that, use the del and ins elements, as appropriate.
+/// Renders text with a strikethrough, or a line through it. Use the <s> element
+/// to represent things that are no longer relevant or no longer accurate. However,
+/// <s> is not appropriate when indicating document edits; for that, use the
+/// <del> and <ins> elements, as appropriate.
 DomElement<L, V> s<L, V>({
   String? key,
   List<String>? classes,
@@ -12251,10 +11033,6 @@ DomElement<L, V> s<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12314,7 +11092,6 @@ DomElement<L, V> s<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12340,10 +11117,9 @@ DomElement<L, V> s<L, V>({
   );
 }
 
-/// The <samp> HTML element is used to enclose inline text which represents
-/// sample (or quoted) output from a computer program. Its contents are typically
-/// rendered using the browser's default monospaced font (such as Courier or
-/// Lucida Console).
+/// Used to enclose inline text which represents sample (or quoted) output from
+/// a computer program. Its contents are typically rendered using the browser's
+/// default monospaced font (such as Courier or Lucida Console).
 DomElement<L, V> samp<L, V>({
   String? key,
   List<String>? classes,
@@ -12358,10 +11134,6 @@ DomElement<L, V> samp<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12421,7 +11193,6 @@ DomElement<L, V> samp<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12447,10 +11218,9 @@ DomElement<L, V> samp<L, V>({
   );
 }
 
-/// The <script> HTML element is used to embed executable code or data; this
-/// is typically used to embed or refer to JavaScript code. The <script> element
-/// can also be used with other languages, such as WebGL's GLSL shader programming
-/// language and JSON.
+/// Used to embed executable code or data; this is typically used to embed or
+/// refer to JavaScript code. The <script> element can also be used with other
+/// languages, such as WebGL's GLSL shader programming language and JSON.
 DomElement<L, V> script<L, V>({
   String? key,
   List<String>? classes,
@@ -12466,15 +11236,8 @@ DomElement<L, V> script<L, V>({
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
 
-  /// Declares the character encoding of the page or script.
-  String? charset,
-
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// How the element handles cross-origin requests
   String? crossorigin,
@@ -12497,9 +11260,6 @@ DomElement<L, V> script<L, V>({
   /// Often used with CSS to style a specific element. The value of this
   /// attribute must be unique.
   String? id,
-
-  /// Indicates the relative fetch priority for the resource.
-  String? importance,
 
   /// Specifies a
   /// Subresource Integrity
@@ -12558,16 +11318,13 @@ DomElement<L, V> script<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (async ?? false) 'async': 'async',
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (charset != null) 'charset': charset,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (crossorigin != null) 'crossorigin': crossorigin,
       if (defer ?? false) 'defer': 'defer',
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
-      if (importance != null) 'importance': importance,
       if (integrity != null) 'integrity': integrity,
       if (itemprop != null) 'itemprop': itemprop,
       if (lang != null) 'lang': lang,
@@ -12593,10 +11350,9 @@ DomElement<L, V> script<L, V>({
   );
 }
 
-/// The <section> HTML element represents a generic standalone section of a
-/// document, which doesn't have a more specific semantic element to represent
-/// it. Sections should always have a heading, with very few exceptions.
-DomElement<L, V> section<L, V>({
+/// Represents a part that contains a set of form controls or other content
+/// related to performing a search or filtering operation.
+DomElement<L, V> search<L, V>({
   String? key,
   List<String>? classes,
   Map<String, String>? attributes,
@@ -12611,9 +11367,106 @@ DomElement<L, V> section<L, V>({
   /// Indicates whether the element's content is editable.
   String? contenteditable,
 
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
+  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
+  /// rtl (Right-To-Left)
+  String? dir,
+
+  /// Defines whether the element can be dragged.
+  String? draggable,
+
+  /// Prevents rendering of given element, while keeping child elements, e.g.
+  /// script elements, active.
+  String? hidden,
+
+  /// Often used with CSS to style a specific element. The value of this
+  /// attribute must be unique.
+  String? id,
+
+  ///
+  String? itemprop,
+
+  /// Defines the language used in the element.
+  String? lang,
+
+  /// Defines an explicit role for an element for use by assistive technologies.
+  String? role,
+
+  /// Assigns a slot in a shadow DOM shadow tree to an element.
+  String? slot,
+
+  /// Indicates whether spell checking is allowed for the element.
+  String? spellcheck,
+
+  /// Overrides the browser's default tab order and follows the one specified
+  /// instead.
+  String? tabindex,
+
+  /// Text to be displayed in a tooltip when hovering over the element.
+  String? title,
+
+  /// Specify whether an element's attribute values and the values of its
+  /// Text node
+  /// children are to be translated when the page is localized, or whether to
+  /// leave them unchanged.
+  String? translate,
+  Map<String, DomEventFn<L, V>>? events,
+  DomLifecycleEventFn<L>? onCreate,
+  DomLifecycleEventFn<L>? onUpdate,
+  DomLifecycleEventFn<L>? onRemove,
+  Iterable<DomNode<L, V>>? children,
+  DomNode<L, V>? child,
+  String? text,
+}) {
+  return DomElement<L, V>(
+    'search',
+    key: key,
+    classes: classes,
+    attributes: <String, String>{
+      if (accesskey != null) 'accesskey': accesskey,
+      if (autocapitalize != null) 'autocapitalize': autocapitalize,
+      if (contenteditable != null) 'contenteditable': contenteditable,
+      if (dir != null) 'dir': dir,
+      if (draggable != null) 'draggable': draggable,
+      if (hidden != null) 'hidden': hidden,
+      if (id != null) 'id': id,
+      if (itemprop != null) 'itemprop': itemprop,
+      if (lang != null) 'lang': lang,
+      if (role != null) 'role': role,
+      if (slot != null) 'slot': slot,
+      if (spellcheck != null) 'spellcheck': spellcheck,
+      if (tabindex != null) 'tabindex': tabindex,
+      if (title != null) 'title': title,
+      if (translate != null) 'translate': translate,
+      ...?attributes,
+    },
+    styles: styles,
+    events: events,
+    onCreate: onCreate,
+    onUpdate: onUpdate,
+    onRemove: onRemove,
+    children: children,
+    child: child,
+    text: text,
+  );
+}
+
+/// Represents a generic standalone section of a document, which doesn't have
+/// a more specific semantic element to represent it. Sections should always
+/// have a heading, with very few exceptions.
+DomElement<L, V> section<L, V>({
+  String? key,
+  List<String>? classes,
+  Map<String, String>? attributes,
+  Map<String, String>? styles,
+
+  /// Keyboard shortcut to activate or add focus to the element.
+  String? accesskey,
+
+  /// Sets whether input is automatically capitalized when entered by user
+  String? autocapitalize,
+
+  /// Indicates whether the element's content is editable.
+  String? contenteditable,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12673,7 +11526,6 @@ DomElement<L, V> section<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12699,7 +11551,7 @@ DomElement<L, V> section<L, V>({
   );
 }
 
-/// The <select> HTML element represents a control that provides a menu of options.
+/// Represents a control that provides a menu of options.
 DomElement<L, V> select<L, V>({
   String? key,
   List<String>? classes,
@@ -12716,15 +11568,8 @@ DomElement<L, V> select<L, V>({
   /// automatically completed by the browser.
   String? autocomplete,
 
-  /// The element should be automatically focused after the page loaded.
-  bool? autofocus,
-
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12806,9 +11651,7 @@ DomElement<L, V> select<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autocomplete != null) 'autocomplete': autocomplete,
-      if (autofocus ?? false) 'autofocus': 'autofocus',
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (disabled ?? false) 'disabled': 'disabled',
       if (draggable != null) 'draggable': draggable,
@@ -12840,10 +11683,10 @@ DomElement<L, V> select<L, V>({
   );
 }
 
-/// The <shadow> HTML element—an obsolete part of the Web Components technology
-/// suite—was intended to be used as a shadow DOM insertion point. You might
-/// have used it if you have created multiple shadow roots under a shadow host.
-/// It is not useful in ordinary HTML.
+/// An obsolete part of the Web Components technology suite that was intended
+/// to be used as a shadow DOM insertion point. You might have used it if you
+/// have created multiple shadow roots under a shadow host. Consider using <slot>
+/// instead.
 DomElement<L, V> shadow<L, V>({
   String? key,
   List<String>? classes,
@@ -12858,10 +11701,6 @@ DomElement<L, V> shadow<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -12921,7 +11760,6 @@ DomElement<L, V> shadow<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -12947,9 +11785,9 @@ DomElement<L, V> shadow<L, V>({
   );
 }
 
-/// The <slot> HTML element—part of the Web Components technology suite—is a
-/// placeholder inside a web component that you can fill with your own markup,
-/// which lets you create separate DOM trees and present them together.
+/// Part of the Web Components technology suite, this element is a placeholder
+/// inside a web component that you can fill with your own markup, which lets
+/// you create separate DOM trees and present them together.
 DomElement<L, V> slot<L, V>({
   String? key,
   List<String>? classes,
@@ -12964,10 +11802,6 @@ DomElement<L, V> slot<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13027,7 +11861,6 @@ DomElement<L, V> slot<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13053,9 +11886,9 @@ DomElement<L, V> slot<L, V>({
   );
 }
 
-/// The <small> HTML element represents side-comments and small print, like
-/// copyright and legal text, independent of its styled presentation. By default,
-/// it renders text within it one font-size smaller, such as from small to x-small.
+/// Represents side-comments and small print, like copyright and legal text,
+/// independent of its styled presentation. By default, it renders text within
+/// it one font size smaller, such as from small to x-small.
 DomElement<L, V> small<L, V>({
   String? key,
   List<String>? classes,
@@ -13070,10 +11903,6 @@ DomElement<L, V> small<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13133,7 +11962,6 @@ DomElement<L, V> small<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13159,12 +11987,12 @@ DomElement<L, V> small<L, V>({
   );
 }
 
-/// The <source> HTML element specifies multiple media resources for the picture,
-/// the audio element, or the video element. It is an empty element, meaning
-/// that it has no content and does not have a closing tag. It is commonly used
-/// to offer the same media content in multiple file formats in order to provide
-/// compatibility with a broad range of browsers given their differing support
-/// for image file formats and media file formats.
+/// Specifies multiple media resources for the picture, the audio element, or
+/// the video element. It is a void element, meaning that it has no content
+/// and does not have a closing tag. It is commonly used to offer the same media
+/// content in multiple file formats in order to provide compatibility with
+/// a broad range of browsers given their differing support for image file formats
+/// and media file formats.
 DomElement<L, V> source<L, V>({
   String? key,
   List<String>? classes,
@@ -13179,10 +12007,6 @@ DomElement<L, V> source<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13258,7 +12082,6 @@ DomElement<L, V> source<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13289,121 +12112,12 @@ DomElement<L, V> source<L, V>({
   );
 }
 
-/// The <spacer> HTML element is an obsolete HTML element which allowed insertion
-/// of empty spaces on pages. It was devised by Netscape to accomplish the same
-/// effect as a single-pixel layout image, which was something web designers
-/// used to use to add white spaces to web pages without actually using an image.
-/// However, <spacer> no longer supported by any major browser and the same
-/// effects can now be achieved using simple CSS.
-DomElement<L, V> spacer<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'spacer',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
-/// The <span> HTML element is a generic inline container for phrasing content,
-/// which does not inherently represent anything. It can be used to group elements
-/// for styling purposes (using the class or id attributes), or because they
-/// share attribute values, such as lang. It should be used only when no other
-/// semantic element is appropriate. <span> is very much like a div element,
-/// but div is a block-level element whereas a <span> is an inline element.
+/// A generic inline container for phrasing content, which does not inherently
+/// represent anything. It can be used to group elements for styling purposes
+/// (using the class or id attributes), or because they share attribute values,
+/// such as lang. It should be used only when no other semantic element is appropriate.
+/// <span> is very much like a div element, but div is a block-level element
+/// whereas a <span> is an inline-level element.
 DomElement<L, V> span<L, V>({
   String? key,
   List<String>? classes,
@@ -13418,10 +12132,6 @@ DomElement<L, V> span<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13481,7 +12191,6 @@ DomElement<L, V> span<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13507,8 +12216,7 @@ DomElement<L, V> span<L, V>({
   );
 }
 
-/// The <strike> HTML element places a strikethrough (horizontal line) over
-/// text.
+/// Places a strikethrough (horizontal line) over text.
 DomElement<L, V> strike<L, V>({
   String? key,
   List<String>? classes,
@@ -13523,10 +12231,6 @@ DomElement<L, V> strike<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13586,7 +12290,6 @@ DomElement<L, V> strike<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13612,9 +12315,8 @@ DomElement<L, V> strike<L, V>({
   );
 }
 
-/// The <strong> HTML element indicates that its contents have strong importance,
-/// seriousness, or urgency. Browsers typically render the contents in bold
-/// type.
+/// Indicates that its contents have strong importance, seriousness, or urgency.
+/// Browsers typically render the contents in bold type.
 DomElement<L, V> strong<L, V>({
   String? key,
   List<String>? classes,
@@ -13629,10 +12331,6 @@ DomElement<L, V> strong<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13692,7 +12390,6 @@ DomElement<L, V> strong<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13718,9 +12415,8 @@ DomElement<L, V> strong<L, V>({
   );
 }
 
-/// The <style> HTML element contains style information for a document, or part
-/// of a document. It contains CSS, which is applied to the contents of the
-/// document containing the <style> element.
+/// Contains style information for a document or part of a document. It contains
+/// CSS, which is applied to the contents of the document containing this element.
 DomElement<L, V> style<L, V>({
   String? key,
   List<String>? classes,
@@ -13735,10 +12431,6 @@ DomElement<L, V> style<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13805,7 +12497,6 @@ DomElement<L, V> style<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13833,9 +12524,9 @@ DomElement<L, V> style<L, V>({
   );
 }
 
-/// The <sub> HTML element specifies inline text which should be displayed as
-/// subscript for solely typographical reasons. Subscripts are typically rendered
-/// with a lowered baseline using smaller text.
+/// Specifies inline text which should be displayed as subscript for solely
+/// typographical reasons. Subscripts are typically rendered with a lowered
+/// baseline using smaller text.
 DomElement<L, V> sub<L, V>({
   String? key,
   List<String>? classes,
@@ -13850,10 +12541,6 @@ DomElement<L, V> sub<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -13913,7 +12600,6 @@ DomElement<L, V> sub<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -13939,9 +12625,9 @@ DomElement<L, V> sub<L, V>({
   );
 }
 
-/// The <summary> HTML element specifies a summary, caption, or legend for a
-/// details element's disclosure box. Clicking the <summary> element toggles
-/// the state of the parent <details> element open and closed.
+/// Specifies a summary, caption, or legend for a details element's disclosure
+/// box. Clicking the <summary> element toggles the state of the parent <details>
+/// element open and closed.
 DomElement<L, V> summary<L, V>({
   String? key,
   List<String>? classes,
@@ -13956,10 +12642,6 @@ DomElement<L, V> summary<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14019,7 +12701,6 @@ DomElement<L, V> summary<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14045,9 +12726,9 @@ DomElement<L, V> summary<L, V>({
   );
 }
 
-/// The <sup> HTML element specifies inline text which is to be displayed as
-/// superscript for solely typographical reasons. Superscripts are usually rendered
-/// with a raised baseline using smaller text.
+/// Specifies inline text which is to be displayed as superscript for solely
+/// typographical reasons. Superscripts are usually rendered with a raised baseline
+/// using smaller text.
 DomElement<L, V> sup<L, V>({
   String? key,
   List<String>? classes,
@@ -14062,10 +12743,6 @@ DomElement<L, V> sup<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14125,7 +12802,6 @@ DomElement<L, V> sup<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14151,11 +12827,9 @@ DomElement<L, V> sup<L, V>({
   );
 }
 
-/// The svg element is a container that defines a new
-/// coordinate system and
-/// viewport. It is used
-/// as the outermost element of SVG documents, but it can also be used to
-/// embed an SVG fragment inside an SVG or HTML document.
+/// Container defining a new coordinate system and viewport. It is used as the
+/// outermost element of SVG documents, but it can also be used to embed an
+/// SVG fragment inside an SVG or HTML document.
 DomElement<L, V> svg<L, V>({
   String? key,
   List<String>? classes,
@@ -14170,10 +12844,6 @@ DomElement<L, V> svg<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14233,7 +12903,6 @@ DomElement<L, V> svg<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14259,9 +12928,8 @@ DomElement<L, V> svg<L, V>({
   );
 }
 
-/// The <table> HTML element represents tabular data — that is, information
-/// presented in a two-dimensional table comprised of rows and columns of cells
-/// containing data.
+/// Represents tabular dataâthat is, information presented in a two-dimensional
+/// table comprised of rows and columns of cells containing data.
 DomElement<L, V> table<L, V>({
   String? key,
   List<String>? classes,
@@ -14270,9 +12938,6 @@ DomElement<L, V> table<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -14301,10 +12966,6 @@ DomElement<L, V> table<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14362,13 +13023,11 @@ DomElement<L, V> table<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (background != null) 'background': background,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (border != null) 'border': border,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14394,8 +13053,8 @@ DomElement<L, V> table<L, V>({
   );
 }
 
-/// The <tbody> HTML element encapsulates a set of table rows (tr elements),
-/// indicating that they comprise the body of the table (table).
+/// Encapsulates a set of table rows (<tr> elements), indicating that they comprise
+/// the body of a table's (main) data.
 DomElement<L, V> tbody<L, V>({
   String? key,
   List<String>? classes,
@@ -14404,9 +13063,6 @@ DomElement<L, V> tbody<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -14420,10 +13076,6 @@ DomElement<L, V> tbody<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14481,11 +13133,9 @@ DomElement<L, V> tbody<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14511,8 +13161,8 @@ DomElement<L, V> tbody<L, V>({
   );
 }
 
-/// The <td> HTML element defines a cell of a table that contains data. It participates
-/// in the table model.
+/// A child of the <tr> element, it defines a cell of a table that contains
+/// data.
 DomElement<L, V> td<L, V>({
   String? key,
   List<String>? classes,
@@ -14521,9 +13171,6 @@ DomElement<L, V> td<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -14548,10 +13195,6 @@ DomElement<L, V> td<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14616,13 +13259,11 @@ DomElement<L, V> td<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (background != null) 'background': background,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (colspan != null) 'colspan': colspan,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (headers != null) 'headers': headers,
@@ -14650,9 +13291,9 @@ DomElement<L, V> td<L, V>({
   );
 }
 
-/// The <template> HTML element is a mechanism for holding HTML that is not
-/// to be rendered immediately when a page is loaded but may be instantiated
-/// subsequently during runtime using JavaScript.
+/// A mechanism for holding HTML that is not to be rendered immediately when
+/// a page is loaded but may be instantiated subsequently during runtime using
+/// JavaScript.
 DomElement<L, V> template<L, V>({
   String? key,
   List<String>? classes,
@@ -14667,10 +13308,6 @@ DomElement<L, V> template<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14730,7 +13367,6 @@ DomElement<L, V> template<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -14756,9 +13392,9 @@ DomElement<L, V> template<L, V>({
   );
 }
 
-/// The <textarea> HTML element represents a multi-line plain-text editing control,
-/// useful when you want to allow users to enter a sizeable amount of free-form
-/// text, for example a comment on a review or feedback form.
+/// Represents a multi-line plain-text editing control, useful when you want
+/// to allow users to enter a sizeable amount of free-form text, for example,
+/// a comment on a review or feedback form.
 DomElement<L, V> textarea<L, V>({
   String? key,
   List<String>? classes,
@@ -14775,18 +13411,11 @@ DomElement<L, V> textarea<L, V>({
   /// automatically completed by the browser.
   String? autocomplete,
 
-  /// The element should be automatically focused after the page loaded.
-  bool? autofocus,
-
   /// Defines the number of columns in a textarea.
   String? cols,
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -14894,10 +13523,8 @@ DomElement<L, V> textarea<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autocomplete != null) 'autocomplete': autocomplete,
-      if (autofocus ?? false) 'autofocus': 'autofocus',
       if (cols != null) 'cols': cols,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (dirname != null) 'dirname': dirname,
       if (disabled ?? false) 'disabled': 'disabled',
@@ -14936,8 +13563,10 @@ DomElement<L, V> textarea<L, V>({
   );
 }
 
-/// The <tfoot> HTML element defines a set of rows summarizing the columns of
-/// the table.
+/// Encapsulates a set of table rows (<tr> elements), indicating that they comprise
+/// the foot of a table with information about the table's columns. This is
+/// usually a summary of the columns, e.g., a sum of the given numbers in a
+/// column.
 DomElement<L, V> tfoot<L, V>({
   String? key,
   List<String>? classes,
@@ -14946,9 +13575,6 @@ DomElement<L, V> tfoot<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -14962,10 +13588,6 @@ DomElement<L, V> tfoot<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15023,11 +13645,9 @@ DomElement<L, V> tfoot<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15053,8 +13673,9 @@ DomElement<L, V> tfoot<L, V>({
   );
 }
 
-/// The <th> HTML element defines a cell as header of a group of table cells.
-/// The exact nature of this group is defined by the scope and headers attributes.
+/// A child of the <tr> element, it defines a cell as the header of a group
+/// of table cells. The nature of this group can be explicitly defined by the
+/// scope and headers attributes.
 DomElement<L, V> th<L, V>({
   String? key,
   List<String>? classes,
@@ -15063,9 +13684,6 @@ DomElement<L, V> th<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -15090,10 +13708,6 @@ DomElement<L, V> th<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15162,13 +13776,11 @@ DomElement<L, V> th<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (background != null) 'background': background,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (colspan != null) 'colspan': colspan,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (headers != null) 'headers': headers,
@@ -15197,8 +13809,9 @@ DomElement<L, V> th<L, V>({
   );
 }
 
-/// The <thead> HTML element defines a set of rows defining the head of the
-/// columns of the table.
+/// Encapsulates a set of table rows (<tr> elements), indicating that they comprise
+/// the head of a table with information about the table's columns. This is
+/// usually in the form of column headers (<th> elements).
 DomElement<L, V> thead<L, V>({
   String? key,
   List<String>? classes,
@@ -15208,18 +13821,11 @@ DomElement<L, V> thead<L, V>({
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
 
-  /// Specifies the horizontal alignment of the element.
-  String? align,
-
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15277,10 +13883,8 @@ DomElement<L, V> thead<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15306,9 +13910,9 @@ DomElement<L, V> thead<L, V>({
   );
 }
 
-/// The <time> HTML element represents a specific period in time. It may include
-/// the datetime attribute to translate dates into machine-readable format,
-/// allowing for better search engine results or custom features such as reminders.
+/// Represents a specific period in time. It may include the datetime attribute
+/// to translate dates into machine-readable format, allowing for better search
+/// engine results or custom features such as reminders.
 DomElement<L, V> time<L, V>({
   String? key,
   List<String>? classes,
@@ -15323,10 +13927,6 @@ DomElement<L, V> time<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates the date and time associated with the element.
   String? datetime,
@@ -15389,7 +13989,6 @@ DomElement<L, V> time<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (datetime != null) 'datetime': datetime,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -15416,9 +14015,8 @@ DomElement<L, V> time<L, V>({
   );
 }
 
-/// The <title> HTML element defines the document's title that is shown in a
-/// Browser's title bar or a page's tab. It only contains text; tags within
-/// the element are ignored.
+/// Defines the document's title that is shown in a browser's title bar or a
+/// page's tab. It only contains text; tags within the element are ignored.
 DomElement<L, V> title<L, V>({
   String? key,
   List<String>? classes,
@@ -15433,10 +14031,6 @@ DomElement<L, V> title<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15496,7 +14090,6 @@ DomElement<L, V> title<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15522,9 +14115,8 @@ DomElement<L, V> title<L, V>({
   );
 }
 
-/// The <tr> HTML element defines a row of cells in a table. The row's cells
-/// can then be established using a mix of td (data cell) and th (header cell)
-/// elements.
+/// Defines a row of cells in a table. The row's cells can then be established
+/// using a mix of <td> (data cell) and <th> (header cell) elements.
 DomElement<L, V> tr<L, V>({
   String? key,
   List<String>? classes,
@@ -15533,9 +14125,6 @@ DomElement<L, V> tr<L, V>({
 
   /// Keyboard shortcut to activate or add focus to the element.
   String? accesskey,
-
-  /// Specifies the horizontal alignment of the element.
-  String? align,
 
   /// Sets whether input is automatically capitalized when entered by user
   String? autocapitalize,
@@ -15549,10 +14138,6 @@ DomElement<L, V> tr<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15610,11 +14195,9 @@ DomElement<L, V> tr<L, V>({
     classes: classes,
     attributes: <String, String>{
       if (accesskey != null) 'accesskey': accesskey,
-      if (align != null) 'align': align,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (bgcolor != null) 'bgcolor': bgcolor,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15640,10 +14223,10 @@ DomElement<L, V> tr<L, V>({
   );
 }
 
-/// The <track> HTML element is used as a child of the media elements, audio
-/// and video. It lets you specify timed text tracks (or time-based data), for
-/// example to automatically handle subtitles. The tracks are formatted in WebVTT
-/// format (.vtt files) — Web Video Text Tracks.
+/// Used as a child of the media elements, audio and video. It lets you specify
+/// timed text tracks (or time-based data), for example to automatically handle
+/// subtitles. The tracks are formatted in WebVTT format (.vtt files)âWeb
+/// Video Text Tracks.
 DomElement<L, V> track<L, V>({
   String? key,
   List<String>? classes,
@@ -15658,10 +14241,6 @@ DomElement<L, V> track<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates that the track should be enabled unless the user's preferences
   /// indicate something different.
@@ -15737,7 +14316,6 @@ DomElement<L, V> track<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (default$ ?? false) 'default': 'default',
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
@@ -15768,10 +14346,10 @@ DomElement<L, V> track<L, V>({
   );
 }
 
-/// The <tt> HTML element creates inline text which is presented using the user
-/// agent default monospace font face. This element was created for the purpose
-/// of rendering text as it would be displayed on a fixed-width display such
-/// as a teletype, text-only screen, or line printer.
+/// Creates inline text which is presented using the user agent default monospace
+/// font face. This element was created for the purpose of rendering text as
+/// it would be displayed on a fixed-width display such as a teletype, text-only
+/// screen, or line printer.
 DomElement<L, V> tt<L, V>({
   String? key,
   List<String>? classes,
@@ -15786,10 +14364,6 @@ DomElement<L, V> tt<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15849,7 +14423,6 @@ DomElement<L, V> tt<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15875,9 +14448,9 @@ DomElement<L, V> tt<L, V>({
   );
 }
 
-/// The <u> HTML element represents a span of inline text which should be rendered
-/// in a way that indicates that it has a non-textual annotation. This is rendered
-/// by default as a simple solid underline, but may be altered using CSS.
+/// Represents a span of inline text which should be rendered in a way that
+/// indicates that it has a non-textual annotation. This is rendered by default
+/// as a simple solid underline but may be altered using CSS.
 DomElement<L, V> u<L, V>({
   String? key,
   List<String>? classes,
@@ -15892,10 +14465,6 @@ DomElement<L, V> u<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -15955,7 +14524,6 @@ DomElement<L, V> u<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -15981,8 +14549,8 @@ DomElement<L, V> u<L, V>({
   );
 }
 
-/// The <ul> HTML element represents an unordered list of items, typically rendered
-/// as a bulleted list.
+/// Represents an unordered list of items, typically rendered as a bulleted
+/// list.
 DomElement<L, V> ul<L, V>({
   String? key,
   List<String>? classes,
@@ -15997,10 +14565,6 @@ DomElement<L, V> ul<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -16060,7 +14624,6 @@ DomElement<L, V> ul<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -16086,9 +14649,9 @@ DomElement<L, V> ul<L, V>({
   );
 }
 
-/// The <var> HTML element represents the name of a variable in a mathematical
-/// expression or a programming context. It's typically presented using an italicized
-/// version of the current typeface, although that behavior is browser-dependent.
+/// Represents the name of a variable in a mathematical expression or a programming
+/// context. It's typically presented using an italicized version of the current
+/// typeface, although that behavior is browser-dependent.
 DomElement<L, V> var$<L, V>({
   String? key,
   List<String>? classes,
@@ -16103,10 +14666,6 @@ DomElement<L, V> var$<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -16166,7 +14725,6 @@ DomElement<L, V> var$<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -16192,9 +14750,9 @@ DomElement<L, V> var$<L, V>({
   );
 }
 
-/// The <video> HTML element embeds a media player which supports video playback
-/// into the document. You can use <video> for audio content as well, but the
-/// audio element may provide a more appropriate user experience.
+/// Embeds a media player which supports video playback into the document. You
+/// can also use <video> for audio content, but the audio element may provide
+/// a more appropriate user experience.
 DomElement<L, V> video<L, V>({
   String? key,
   List<String>? classes,
@@ -16210,15 +14768,8 @@ DomElement<L, V> video<L, V>({
   /// The audio or video should play as soon as possible.
   bool? autoplay,
 
-  /// Contains the time range of already buffered media.
-  String? buffered,
-
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Indicates whether the browser should show playback controls to the user.
   bool? controls,
@@ -16264,6 +14815,11 @@ DomElement<L, V> video<L, V>({
 
   /// Indicates whether the audio will be initially silenced on page load.
   bool? muted,
+
+  /// A Boolean attribute indicating that the video is to be played "inline";
+  /// that is, within the element's playback area. Note that the absence of this
+  /// attribute does not imply that the video will always be played in fullscreen.
+  bool? playsinline,
 
   /// A URL indicating a poster frame to show until the user plays or seeks.
   String? poster,
@@ -16321,9 +14877,7 @@ DomElement<L, V> video<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (autoplay ?? false) 'autoplay': 'autoplay',
-      if (buffered != null) 'buffered': buffered,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (controls ?? false) 'controls': 'controls',
       if (crossorigin != null) 'crossorigin': crossorigin,
       if (dir != null) 'dir': dir,
@@ -16335,6 +14889,7 @@ DomElement<L, V> video<L, V>({
       if (lang != null) 'lang': lang,
       if (loop ?? false) 'loop': 'loop',
       if (muted ?? false) 'muted': 'muted',
+      if (playsinline ?? false) 'playsinline': 'playsinline',
       if (poster != null) 'poster': poster,
       if (preload != null) 'preload': preload,
       if (role != null) 'role': role,
@@ -16358,9 +14913,9 @@ DomElement<L, V> video<L, V>({
   );
 }
 
-/// The <wbr> HTML element represents a word break opportunity—a position within
-/// text where the browser may optionally break a line, though its line-breaking
-/// rules would not otherwise create a break at that location.
+/// Represents a word break opportunityâa position within text where the browser
+/// may optionally break a line, though its line-breaking rules would not otherwise
+/// create a break at that location.
 DomElement<L, V> wbr<L, V>({
   String? key,
   List<String>? classes,
@@ -16375,10 +14930,6 @@ DomElement<L, V> wbr<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -16438,7 +14989,6 @@ DomElement<L, V> wbr<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,
@@ -16464,10 +15014,9 @@ DomElement<L, V> wbr<L, V>({
   );
 }
 
-/// The <xmp> HTML element renders text between the start and end tags without
-/// interpreting the HTML in between and using a monospaced font. The HTML2
-/// specification recommended that it should be rendered wide enough to allow
-/// 80 characters per line.
+/// Renders text between the start and end tags without interpreting the HTML
+/// in between and using a monospaced font. The HTML2 specification recommended
+/// that it should be rendered wide enough to allow 80 characters per line.
 DomElement<L, V> xmp<L, V>({
   String? key,
   List<String>? classes,
@@ -16482,10 +15031,6 @@ DomElement<L, V> xmp<L, V>({
 
   /// Indicates whether the element's content is editable.
   String? contenteditable,
-
-  /// Defines the ID of a <menu> element which will
-  /// serve as the element's context menu.
-  String? contextmenu,
 
   /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
   /// rtl (Right-To-Left)
@@ -16545,7 +15090,6 @@ DomElement<L, V> xmp<L, V>({
       if (accesskey != null) 'accesskey': accesskey,
       if (autocapitalize != null) 'autocapitalize': autocapitalize,
       if (contenteditable != null) 'contenteditable': contenteditable,
-      if (contextmenu != null) 'contextmenu': contextmenu,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (hidden != null) 'hidden': hidden,

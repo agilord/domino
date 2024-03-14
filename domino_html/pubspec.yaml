@@ -1,15 +1,15 @@
 name: domino_html
 description: Helper methods to build HTML elements with proper attributes using package:domino.
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/agilord/domino/tree/main/domino_html
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: '>=2.17.0 <4.0.0'
 
 dependencies:
   domino: ^0.8.0
 
 dev_dependencies:
-  lints: ^2.0.0
+  lints: ^3.0.0
   html: ^0.15.0
-  http: ^0.13.4
+  http: ^1.0.0
