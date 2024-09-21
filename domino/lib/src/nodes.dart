@@ -66,7 +66,7 @@ class DomElement<L, V> implements DomNode<L, V> {
       onRemove: _onRemove,
     );
     if (_children != null) {
-      for (final node in _children!) {
+      for (final node in _children) {
         node.build(b);
       }
     }

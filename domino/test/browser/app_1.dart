@@ -1,21 +1,26 @@
-import 'dart:html';
-
 import 'package:domino/browser.dart';
+import 'package:web/web.dart';
 
 void main() {
-  window.onLoad.listen((_) => _main());
+  EventStreamProvider<Event>('load').forTarget(window).listen((_) => _main());
+}
+
+extension on Element {
+  void click() {
+    dispatchEvent(Event('click'));
+  }
 }
 
 void _main() {
   final root = document.getElementById('root')!;
   final view = registerView(root: root, builderFn: _build);
 
-  final appOutput = PreElement()..id = 'app-output';
+  final appOutput = document.createElement('pre')..id = 'app-output';
   document.body!.append(appOutput);
 
-  final appButtons = DivElement()..id = 'app-buttons';
+  final appButtons = document.createElement('div')..id = 'app-buttons';
   document.body!.append(appButtons);
-  appButtons.append(ButtonElement()
+  appButtons.append(document.createElement('button')
     ..text = 'test-1'
     ..id = 'app-test-1'
     ..onClick.listen((event) async {
@@ -32,7 +37,7 @@ void _main() {
         'builds: $_builds',
         'created: $_created',
         'removed: $_removed',
-        'clicks: $_clicks (${document.getElementById('incrementer')!.innerHtml})',
+        'clicks: $_clicks (${document.getElementById('incrementer')!.textContent})',
       ].join('\n');
     }));
 }

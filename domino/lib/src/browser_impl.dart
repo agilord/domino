@@ -1,7 +1,39 @@
 import 'dart:async';
-import 'dart:html';
+
+import 'package:web/web.dart';
 
 import 'dom_builder.dart';
+
+extension on Element {
+  Iterable<Element> childrenIterable() {
+    final cn = children;
+    return Iterable<Element>.generate(cn.length, (i) => cn.item(i)!);
+  }
+
+  int get childNodesCount => childNodes.length;
+
+  Iterable<Node> get childNodesIterable {
+    final cn = childNodes;
+    return Iterable<Node>.generate(cn.length, (i) => cn.item(i)!);
+  }
+
+  Node removeLastChildNode() {
+    final cn = childNodes;
+    final last = cn.item(cn.length - 1)!;
+    return removeChild(last);
+  }
+}
+
+extension on NamedNodeMap {
+  Set<String> getKeysAsSet() {
+    final set = <String>{};
+    for (var i = 0; i < length; i++) {
+      final attr = item(i)!;
+      set.add(attr.localName);
+    }
+    return set;
+  }
+}
 
 /// Register DOM view in browser.
 DomView registerView({
@@ -67,8 +99,9 @@ class _Position {
 
   _Position(this.tag, this.container);
 
-  Node? get current =>
-      container.nodes.length > cursor ? container.nodes[cursor] : null;
+  Node? get current => container.childNodesCount > cursor
+      ? container.childNodes.item(cursor)
+      : null;
 }
 
 class _DomBuilder extends DomBuilder<Element, Event> {
@@ -106,7 +139,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     // ignore: unnecessary_null_comparison
     if (elem == null) {
       Element? matched;
-      for (final n in last.container.nodes.skip(last.cursor)) {
+      for (final n in last.container.childNodesIterable.skip(last.cursor)) {
         if (n is Element && n.tagName.toLowerCase() == tagLc) {
           final nd = n.getData();
           if (nd?.key == reuseKey) {
@@ -135,7 +168,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
       }
       last.cursor++;
     } else {
-      attributesToRemove = elem.attributes.keys.toSet();
+      attributesToRemove = elem.attributes.getKeysAsSet();
     }
     _positions.add(_Position(tag, elem));
     elem.clearOrSetAttribute('id', id);
@@ -228,8 +261,8 @@ class _DomBuilder extends DomBuilder<Element, Event> {
       throw AssertionError('Tag missmatch: "$tag" != "$last".');
     }
 
-    while (last.container.nodes.length > last.cursor) {
-      _onRemove(last.container.nodes.removeLast());
+    while (last.container.childNodesCount > last.cursor) {
+      _onRemove(last.container.removeLastChildNode());
     }
 
     return last.container;
@@ -240,7 +273,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
       final data = removed.getData();
       if (data == null) return;
       if (data.subTreeOnRemove) {
-        for (final e in removed.children) {
+        for (final e in removed.childrenIterable()) {
           _onRemove(e);
         }
       }
@@ -258,7 +291,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (!last.mayHaveContent) {
       throw AssertionError('Must not have content at this point.');
     }
-    if (last.container.nodes.length > last.cursor) {
+    if (last.container.childNodesCount > last.cursor) {
       last.cursor++;
     } else {
       throw AssertionError('No node to skip.');
@@ -271,8 +304,8 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (!last.mayHaveContent) {
       throw AssertionError('Must not have content at this point.');
     }
-    if (last.container.nodes.length > last.cursor) {
-      last.cursor = last.container.nodes.length;
+    if (last.container.childNodesCount > last.cursor) {
+      last.cursor = last.container.childNodesCount;
       last.mayHaveContent = false;
     } else {
       throw AssertionError('No node to skip.');
@@ -289,13 +322,13 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (current == null) {
       last.container.append(Text(value));
     } else if (current is Text) {
-      if (current.text == value) {
+      if (current.textContent == value) {
         // nothing
       } else {
         current.text = value;
       }
     } else {
-      current.replaceWith(Text(value));
+      current.parentElement!.replaceChild(current, Text(value));
     }
     last.cursor++;
   }
@@ -309,9 +342,10 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (!last.mayHaveContent) {
       throw AssertionError('Must not have content at this point.');
     }
-    last.container.setInnerHtml(value);
-    last.cursor = last.container.nodes.length;
-    last.mayHaveContent = false;
+    throw UnimplementedError('innerHtml is not supported at the moment.');
+    // last.container.setInnerHtml(value);
+    // last.cursor = last.container.childNodesCount;
+    // last.mayHaveContent = false;
   }
 }
 
@@ -362,7 +396,8 @@ class _EventBinding {
   _EventBinding(this.view, this.element, this.type, this.fn);
 
   void bind() {
-    subscription = element.on[type].listen((event) {
+    subscription =
+        EventStreamProvider<Event>(type).forElement(element).listen((event) {
       fn(_DomEvent(view, type, element, event));
     });
   }

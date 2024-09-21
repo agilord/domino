@@ -1,9 +1,8 @@
-import 'dart:html';
-
 import 'package:domino/browser.dart';
+import 'package:web/web.dart';
 
 void main() {
-  window.onLoad.listen((_) => _main());
+  EventStreamProvider<Event>('load').forTarget(window).listen((_) => _main());
 }
 
 void _main() {

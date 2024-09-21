@@ -23,7 +23,9 @@ class BrowserTestEnv {
 
   Future<void> init() async {
     // compile
-    final pr = await Process.run('dart2js', [
+    final pr = await Process.run('dart', [
+      'compile',
+      'js',
       '-o',
       '${tempDir.path}/app.dart.js',
       appPath,

@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:domino/browser.dart';
+import 'package:web/web.dart';
 
 void main() {
   registerView(root: document.getElementById('root')!, builderFn: _App().build);
