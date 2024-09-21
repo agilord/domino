@@ -2773,7 +2773,7 @@ DomElement<L, V> content<L, V>({
 }
 
 /// Links a given piece of content with a machine-readable translation. If the
-/// content is time- or date-related, the<time> element must be used.
+/// content is time- or date-related, the <time> element must be used.
 DomElement<L, V> data<L, V>({
   String? key,
   List<String>? classes,
@@ -4129,6 +4129,106 @@ DomElement<L, V> embed<L, V>({
       if (translate != null) 'translate': translate,
       if (type != null) 'type': type,
       if (width != null) 'width': width,
+      ...?attributes,
+    },
+    styles: styles,
+    events: events,
+    onCreate: onCreate,
+    onUpdate: onUpdate,
+    onRemove: onRemove,
+    children: children,
+    child: child,
+    text: text,
+  );
+}
+
+/// Represents a nested browsing context, like <iframe> but with more native
+/// privacy features built in.
+DomElement<L, V> fencedframe<L, V>({
+  String? key,
+  List<String>? classes,
+  Map<String, String>? attributes,
+  Map<String, String>? styles,
+
+  /// Keyboard shortcut to activate or add focus to the element.
+  String? accesskey,
+
+  /// Sets whether input is automatically capitalized when entered by user
+  String? autocapitalize,
+
+  /// Indicates whether the element's content is editable.
+  String? contenteditable,
+
+  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
+  /// rtl (Right-To-Left)
+  String? dir,
+
+  /// Defines whether the element can be dragged.
+  String? draggable,
+
+  /// Prevents rendering of given element, while keeping child elements, e.g.
+  /// script elements, active.
+  String? hidden,
+
+  /// Often used with CSS to style a specific element. The value of this
+  /// attribute must be unique.
+  String? id,
+
+  ///
+  String? itemprop,
+
+  /// Defines the language used in the element.
+  String? lang,
+
+  /// Defines an explicit role for an element for use by assistive technologies.
+  String? role,
+
+  /// Assigns a slot in a shadow DOM shadow tree to an element.
+  String? slot,
+
+  /// Indicates whether spell checking is allowed for the element.
+  String? spellcheck,
+
+  /// Overrides the browser's default tab order and follows the one specified
+  /// instead.
+  String? tabindex,
+
+  /// Text to be displayed in a tooltip when hovering over the element.
+  String? title,
+
+  /// Specify whether an element's attribute values and the values of its
+  /// Text node
+  /// children are to be translated when the page is localized, or whether to
+  /// leave them unchanged.
+  String? translate,
+  Map<String, DomEventFn<L, V>>? events,
+  DomLifecycleEventFn<L>? onCreate,
+  DomLifecycleEventFn<L>? onUpdate,
+  DomLifecycleEventFn<L>? onRemove,
+  Iterable<DomNode<L, V>>? children,
+  DomNode<L, V>? child,
+  String? text,
+}) {
+  return DomElement<L, V>(
+    'fencedframe',
+    key: key,
+    classes: classes,
+    attributes: <String, String>{
+      if (accesskey != null) 'accesskey': accesskey,
+      if (autocapitalize != null) 'autocapitalize': autocapitalize,
+      if (contenteditable != null) 'contenteditable': contenteditable,
+      if (dir != null) 'dir': dir,
+      if (draggable != null) 'draggable': draggable,
+      if (hidden != null) 'hidden': hidden,
+      if (id != null) 'id': id,
+      if (itemprop != null) 'itemprop': itemprop,
+      if (lang != null) 'lang': lang,
+      if (role != null) 'role': role,
+      if (slot != null) 'slot': slot,
+      if (spellcheck != null) 'spellcheck': spellcheck,
+      if (tabindex != null) 'tabindex': tabindex,
+      if (title != null) 'title': title,
+      if (translate != null) 'translate': translate,
       ...?attributes,
     },
     styles: styles,
