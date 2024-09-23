@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:js_interop';
 
 import 'package:web/web.dart';
 
@@ -342,10 +343,9 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (!last.mayHaveContent) {
       throw AssertionError('Must not have content at this point.');
     }
-    throw UnimplementedError('innerHtml is not supported at the moment.');
-    // last.container.setInnerHtml(value);
-    // last.cursor = last.container.childNodesCount;
-    // last.mayHaveContent = false;
+    last.container.setHTMLUnsafe(value.toJS);
+    last.cursor = last.container.childNodesCount;
+    last.mayHaveContent = false;
   }
 }
 

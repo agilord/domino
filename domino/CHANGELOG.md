@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.9.0-dev.1
+## 0.9.0
 
 - Updated SDK and lints.
 - Migrated to use 'package:web`.
