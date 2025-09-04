@@ -1,6 +1,6 @@
 # Domino
 
-Inspired by Google's [incremental-dom](http://google.github.io/incremental-dom/)
+Inspired by Google's [incremental-dom](https://google.github.io/incremental-dom/)
 library, `package:domino` is a Dart-native DOM library supporting incremental DOM
 updates, efficient event handling and reuse.
 

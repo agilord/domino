@@ -141,7 +141,7 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     if (elem == null) {
       Element? matched;
       for (final n in last.container.childNodesIterable.skip(last.cursor)) {
-        if (n is Element && n.tagName.toLowerCase() == tagLc) {
+        if (n.isA<Element>() && (n as Element).tagName.toLowerCase() == tagLc) {
           final nd = n.getData();
           if (nd?.key == reuseKey) {
             matched = n;
@@ -270,8 +270,8 @@ class _DomBuilder extends DomBuilder<Element, Event> {
   }
 
   void _onRemove(Node removed) {
-    if (removed is Element) {
-      final data = removed.getData();
+    if (removed.isA<Element>()) {
+      final data = (removed as Element).getData();
       if (data == null) return;
       if (data.subTreeOnRemove) {
         for (final e in removed.childrenIterable()) {
@@ -322,11 +322,11 @@ class _DomBuilder extends DomBuilder<Element, Event> {
     final current = last.current;
     if (current == null) {
       last.container.append(Text(value));
-    } else if (current is Text) {
+    } else if (current.isA<Text>()) {
       if (current.textContent == value) {
         // nothing
       } else {
-        current.text = value;
+        current.textContent = value;
       }
     } else {
       current.parentElement!.replaceChild(current, Text(value));

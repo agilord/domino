@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+- Updated SDK and lints.
+
 ## 0.9.0
 
 - Updated SDK and lints.

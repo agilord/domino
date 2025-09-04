@@ -17,10 +17,13 @@ void main() {
     test('test lifecycle methods', () async {
       await env.init();
 
-      final msgs = <String?>[];
+      final msgs = <String>[];
 
       void recordMessage(ConsoleMessage msg) {
-        msgs.add(msg.text);
+        final text = msg.text ?? '';
+        if (text.isNotEmpty && !text.startsWith('Failed to load resource')) {
+          msgs.add(text);
+        }
       }
 
       final page = await env.newPage(recordMessage);

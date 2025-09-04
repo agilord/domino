@@ -21,10 +21,10 @@ void _main() {
   final appButtons = document.createElement('div')..id = 'app-buttons';
   document.body!.append(appButtons);
   appButtons.append(document.createElement('button')
-    ..text = 'test-1'
+    ..textContent = 'test-1'
     ..id = 'app-test-1'
     ..onClick.listen((event) async {
-      appOutput.text = '';
+      appOutput.textContent = '';
       document.getElementById('incrementer')!.click();
       document.getElementById('incrementer')!.click();
       await view.invalidate();
@@ -32,7 +32,7 @@ void _main() {
       await view.invalidate();
       document.getElementById('incrementer')!.click();
       await view.invalidate();
-      appOutput.text = [
+      appOutput.textContent = [
         'test-1',
         'builds: $_builds',
         'created: $_created',
