@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Updated SDK, lints and specification.
+
 ## 0.2.1
 
 - Updated SDK, lints and specification.

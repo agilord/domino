@@ -15,11 +15,7 @@ final _elementDocs = <String, String>{};
 final _elementAttributes = <String, List<String>>{};
 final _attributeDocs = <String, String>{};
 
-final _symbols = {
-  'default',
-  'for',
-  'var',
-};
+final _symbols = {'default', 'for', 'var'};
 final _boolAttributes = {
   'allowfullscreen',
   'async',
@@ -49,7 +45,8 @@ final _boolAttributes = {
 
 Future<void> _fetchElements() async {
   final rs = await http.get(
-      Uri.parse('https://developer.mozilla.org/en-US/docs/Web/HTML/Element'));
+    Uri.parse('https://developer.mozilla.org/en-US/docs/Web/HTML/Element'),
+  );
   if (rs.statusCode != 200) {
     throw Exception('Unexpected status code: ${rs.statusCode}');
   }
@@ -61,8 +58,11 @@ Future<void> _fetchElements() async {
           .where((e) => e.localName!.toLowerCase() == 'td')
           .toList();
       if (cols.length != 2) continue;
-      final parts =
-          cols[0].text.trim().split(',').map((e) => e.trim()).toList();
+      final parts = cols[0].text
+          .trim()
+          .split(',')
+          .map((e) => e.trim())
+          .toList();
       for (final part in parts) {
         final elem = part.substring(1, part.length - 1).trim();
         _elementDocs[elem] = cols[1].text.trim();
@@ -72,8 +72,9 @@ Future<void> _fetchElements() async {
 }
 
 Future<void> _fetchAttributes() async {
-  final rs = await http.get(Uri.parse(
-      'https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes'));
+  final rs = await http.get(
+    Uri.parse('https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes'),
+  );
   if (rs.statusCode != 200) {
     throw Exception('Unexpected status code: ${rs.statusCode}');
   }
@@ -103,6 +104,7 @@ Future<void> _fetchAttributes() async {
             .where((e) => e.startsWith('<') && e.endsWith('>'))
             .map((e) => e.substring(1, e.length - 1).trim())
             .where((e) => e.isNotEmpty)
+            .where((e) => !e.contains(' ') || !e.contains('>'))
             .toList();
         for (final elem in parts) {
           _elementAttributes.putIfAbsent(elem, () => []).add(attr);
@@ -114,11 +116,9 @@ Future<void> _fetchAttributes() async {
 
 String _generateHtmlNodes() {
   final sb = StringBuffer();
+  sb.writeln('// ignore_for_file: unintended_html_in_doc_comment\n');
   sb.writeln('import \'package:domino/domino.dart\';');
-  final elems = {
-    ..._elementDocs.keys,
-    ..._elementAttributes.keys,
-  }.toList()
+  final elems = {..._elementDocs.keys, ..._elementAttributes.keys}.toList()
     ..sort();
   for (final elem in elems) {
     final attrs = (_elementAttributes[elem] ?? <String>[])

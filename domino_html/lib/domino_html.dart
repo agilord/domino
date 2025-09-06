@@ -1,3 +1,5 @@
+// ignore_for_file: unintended_html_in_doc_comment
+
 import 'package:domino/domino.dart';
 
 /// Together with its href attribute, creates a hyperlink to web pages, files,
@@ -926,7 +928,7 @@ DomElement<L, V> audio<L, V>({
 /// you should not use <b> for styling text or granting importance. If you wish
 /// to create boldface text, you should use the CSS font-weight property. If
 /// you wish to indicate an element is of special importance, you should use
-/// the strong element.
+/// the <strong> element.
 DomElement<L, V> b<L, V>({
   String? key,
   List<String>? classes,
@@ -1544,7 +1546,7 @@ DomElement<L, V> blockquote<L, V>({
   );
 }
 
-/// represents the content of an HTML document. There can be only one such element
+/// Represents the content of an HTML document. There can be only one such element
 /// in a document.
 DomElement<L, V> body<L, V>({
   String? key,
@@ -1796,28 +1798,28 @@ DomElement<L, V> button<L, V>({
   /// the <form>.
   String? formaction,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute sets the encoding type to use during form submission. If
   /// this attribute is specified, it overrides the
   /// enctype attribute of the button's
   /// form owner.
   String? formenctype,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute sets the submission method to use during form submission
   /// (GET, POST, etc.). If this attribute is
   /// specified, it overrides the method attribute of the
   /// button's form owner.
   String? formmethod,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this boolean attribute specifies that the form is not to be validated
   /// when it is submitted. If this attribute is specified, it overrides the
   /// novalidate attribute of the button's
   /// form owner.
   bool? formnovalidate,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute specifies the browsing context (for example, tab, window,
   /// or inline frame) in which to display the response that is received after
   /// submitting the form. If this attribute is specified, it overrides the
@@ -1994,6 +1996,7 @@ DomElement<L, V> canvas<L, V>({
   String? translate,
 
   /// For the elements listed here, this establishes the element's width.
+  ///
   ///
   ///
   /// Note: For all other instances, such as
@@ -2243,9 +2246,9 @@ DomElement<L, V> center<L, V>({
   );
 }
 
-/// Used to mark up the title of a cited creative work. The reference may be
-/// in an abbreviated form according to context-appropriate conventions related
-/// to citation metadata.
+/// Used to mark up the title of a creative work. The reference may be in an
+/// abbreviated form according to context-appropriate conventions related to
+/// citation metadata.
 DomElement<L, V> cite<L, V>({
   String? key,
   List<String>? classes,
@@ -4092,6 +4095,7 @@ DomElement<L, V> embed<L, V>({
   /// For the elements listed here, this establishes the element's width.
   ///
   ///
+  ///
   /// Note: For all other instances, such as
   /// <div>, this is a legacy attribute, in
   /// which case the CSS width property should be
@@ -4777,7 +4781,7 @@ DomElement<L, V> form<L, V>({
   /// List of types the server accepts, typically a file type.
   String? accept,
 
-  /// List of supported charsets.
+  /// The character set, which if provided must be "UTF-8".
   String? acceptCharset,
 
   /// Keyboard shortcut to activate or add focus to the element.
@@ -6427,6 +6431,7 @@ DomElement<L, V> iframe<L, V>({
   /// For the elements listed here, this establishes the element's width.
   ///
   ///
+  ///
   /// Note: For all other instances, such as
   /// <div>, this is a legacy attribute, in
   /// which case the CSS width property should be
@@ -6622,6 +6627,11 @@ DomElement<L, V> img<L, V>({
   /// Defines whether the element can be dragged.
   String? draggable,
 
+  /// Indicates that an element is flagged for tracking by PerformanceObserver
+  /// objects using the "element" type. For more details, see the PerformanceElementTiming
+  /// interface.
+  String? elementtiming,
+
   /// Specifies the height of elements listed here. For all other elements,
   /// use the CSS height property.
   ///
@@ -6695,6 +6705,7 @@ DomElement<L, V> img<L, V>({
   /// For the elements listed here, this establishes the element's width.
   ///
   ///
+  ///
   /// Note: For all other instances, such as
   /// <div>, this is a legacy attribute, in
   /// which case the CSS width property should be
@@ -6722,6 +6733,7 @@ DomElement<L, V> img<L, V>({
       if (decoding != null) 'decoding': decoding,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
+      if (elementtiming != null) 'elementtiming': elementtiming,
       if (height != null) 'height': height,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
@@ -6811,28 +6823,28 @@ DomElement<L, V> input<L, V>({
   /// the <form>.
   String? formaction,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute sets the encoding type to use during form submission. If
   /// this attribute is specified, it overrides the
   /// enctype attribute of the button's
   /// form owner.
   String? formenctype,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute sets the submission method to use during form submission
   /// (GET, POST, etc.). If this attribute is
   /// specified, it overrides the method attribute of the
   /// button's form owner.
   String? formmethod,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this boolean attribute specifies that the form is not to be validated
   /// when it is submitted. If this attribute is specified, it overrides the
   /// novalidate attribute of the button's
   /// form owner.
   bool? formnovalidate,
 
-  /// If the button/input is a submit button (e.g. type="submit"),
+  /// If the button/input is a submit button (e.g., type="submit"),
   /// this attribute specifies the browsing context (for example, tab, window,
   /// or inline frame) in which to display the response that is received after
   /// submitting the form. If this attribute is specified, it overrides the
@@ -6945,6 +6957,7 @@ DomElement<L, V> input<L, V>({
   String? value,
 
   /// For the elements listed here, this establishes the element's width.
+  ///
   ///
   ///
   /// Note: For all other instances, such as
@@ -7262,9 +7275,6 @@ DomElement<L, V> label<L, V>({
   /// Describes elements which belongs to this one.
   String? for$,
 
-  /// Indicates the form that is the owner of the element.
-  String? form,
-
   /// Prevents rendering of given element, while keeping child elements, e.g.
   /// script elements, active.
   String? hidden,
@@ -7319,7 +7329,6 @@ DomElement<L, V> label<L, V>({
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
       if (for$ != null) 'for': for$,
-      if (form != null) 'form': form,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
       if (itemprop != null) 'itemprop': itemprop,
@@ -8561,9 +8570,6 @@ DomElement<L, V> meter<L, V>({
   /// Defines whether the element can be dragged.
   String? draggable,
 
-  /// Indicates the form that is the owner of the element.
-  String? form,
-
   /// Prevents rendering of given element, while keeping child elements, e.g.
   /// script elements, active.
   String? hidden,
@@ -8636,7 +8642,6 @@ DomElement<L, V> meter<L, V>({
       if (contenteditable != null) 'contenteditable': contenteditable,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
-      if (form != null) 'form': form,
       if (hidden != null) 'hidden': hidden,
       if (high != null) 'high': high,
       if (id != null) 'id': id,
@@ -9268,6 +9273,7 @@ DomElement<L, V> object<L, V>({
   String? usemap,
 
   /// For the elements listed here, this establishes the element's width.
+  ///
   ///
   ///
   /// Note: For all other instances, such as
@@ -10187,106 +10193,6 @@ DomElement<L, V> plaintext<L, V>({
   );
 }
 
-/// Enables the embedding of another HTML page into the current one to enable
-/// smoother navigation into new pages.
-DomElement<L, V> portal<L, V>({
-  String? key,
-  List<String>? classes,
-  Map<String, String>? attributes,
-  Map<String, String>? styles,
-
-  /// Keyboard shortcut to activate or add focus to the element.
-  String? accesskey,
-
-  /// Sets whether input is automatically capitalized when entered by user
-  String? autocapitalize,
-
-  /// Indicates whether the element's content is editable.
-  String? contenteditable,
-
-  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
-  /// rtl (Right-To-Left)
-  String? dir,
-
-  /// Defines whether the element can be dragged.
-  String? draggable,
-
-  /// Prevents rendering of given element, while keeping child elements, e.g.
-  /// script elements, active.
-  String? hidden,
-
-  /// Often used with CSS to style a specific element. The value of this
-  /// attribute must be unique.
-  String? id,
-
-  ///
-  String? itemprop,
-
-  /// Defines the language used in the element.
-  String? lang,
-
-  /// Defines an explicit role for an element for use by assistive technologies.
-  String? role,
-
-  /// Assigns a slot in a shadow DOM shadow tree to an element.
-  String? slot,
-
-  /// Indicates whether spell checking is allowed for the element.
-  String? spellcheck,
-
-  /// Overrides the browser's default tab order and follows the one specified
-  /// instead.
-  String? tabindex,
-
-  /// Text to be displayed in a tooltip when hovering over the element.
-  String? title,
-
-  /// Specify whether an element's attribute values and the values of its
-  /// Text node
-  /// children are to be translated when the page is localized, or whether to
-  /// leave them unchanged.
-  String? translate,
-  Map<String, DomEventFn<L, V>>? events,
-  DomLifecycleEventFn<L>? onCreate,
-  DomLifecycleEventFn<L>? onUpdate,
-  DomLifecycleEventFn<L>? onRemove,
-  Iterable<DomNode<L, V>>? children,
-  DomNode<L, V>? child,
-  String? text,
-}) {
-  return DomElement<L, V>(
-    'portal',
-    key: key,
-    classes: classes,
-    attributes: <String, String>{
-      if (accesskey != null) 'accesskey': accesskey,
-      if (autocapitalize != null) 'autocapitalize': autocapitalize,
-      if (contenteditable != null) 'contenteditable': contenteditable,
-      if (dir != null) 'dir': dir,
-      if (draggable != null) 'draggable': draggable,
-      if (hidden != null) 'hidden': hidden,
-      if (id != null) 'id': id,
-      if (itemprop != null) 'itemprop': itemprop,
-      if (lang != null) 'lang': lang,
-      if (role != null) 'role': role,
-      if (slot != null) 'slot': slot,
-      if (spellcheck != null) 'spellcheck': spellcheck,
-      if (tabindex != null) 'tabindex': tabindex,
-      if (title != null) 'title': title,
-      if (translate != null) 'translate': translate,
-      ...?attributes,
-    },
-    styles: styles,
-    events: events,
-    onCreate: onCreate,
-    onUpdate: onUpdate,
-    onRemove: onRemove,
-    children: children,
-    child: child,
-    text: text,
-  );
-}
-
 /// Represents preformatted text which is to be presented exactly as written
 /// in the HTML file. The text is typically rendered using a non-proportional,
 /// or monospaced, font. Whitespace inside this element is displayed as written.
@@ -10412,9 +10318,6 @@ DomElement<L, V> progress<L, V>({
   /// Defines whether the element can be dragged.
   String? draggable,
 
-  /// Indicates the form that is the owner of the element.
-  String? form,
-
   /// Prevents rendering of given element, while keeping child elements, e.g.
   /// script elements, active.
   String? hidden,
@@ -10475,7 +10378,6 @@ DomElement<L, V> progress<L, V>({
       if (contenteditable != null) 'contenteditable': contenteditable,
       if (dir != null) 'dir': dir,
       if (draggable != null) 'draggable': draggable,
-      if (form != null) 'form': form,
       if (hidden != null) 'hidden': hidden,
       if (id != null) 'id': id,
       if (itemprop != null) 'itemprop': itemprop,
@@ -10607,9 +10509,9 @@ DomElement<L, V> q<L, V>({
   );
 }
 
-/// Used to delimit the base text component of a ruby annotation, i.e. the text
-/// that is being annotated. One <rb> element should wrap each separate atomic
-/// segment of the base text.
+/// Used to delimit the base text component of a ruby annotation, i.e., the
+/// text that is being annotated. One <rb> element should wrap each separate
+/// atomic segment of the base text.
 DomElement<L, V> rb<L, V>({
   String? key,
   List<String>? classes,
@@ -11765,6 +11667,106 @@ DomElement<L, V> select<L, V>({
       if (required ?? false) 'required': 'required',
       if (role != null) 'role': role,
       if (size != null) 'size': size,
+      if (slot != null) 'slot': slot,
+      if (spellcheck != null) 'spellcheck': spellcheck,
+      if (tabindex != null) 'tabindex': tabindex,
+      if (title != null) 'title': title,
+      if (translate != null) 'translate': translate,
+      ...?attributes,
+    },
+    styles: styles,
+    events: events,
+    onCreate: onCreate,
+    onUpdate: onUpdate,
+    onRemove: onRemove,
+    children: children,
+    child: child,
+    text: text,
+  );
+}
+
+/// Displays the content of the currently selected <option> inside a closed
+/// <select> element.
+DomElement<L, V> selectedcontent<L, V>({
+  String? key,
+  List<String>? classes,
+  Map<String, String>? attributes,
+  Map<String, String>? styles,
+
+  /// Keyboard shortcut to activate or add focus to the element.
+  String? accesskey,
+
+  /// Sets whether input is automatically capitalized when entered by user
+  String? autocapitalize,
+
+  /// Indicates whether the element's content is editable.
+  String? contenteditable,
+
+  /// Defines the text direction. Allowed values are ltr (Left-To-Right) or
+  /// rtl (Right-To-Left)
+  String? dir,
+
+  /// Defines whether the element can be dragged.
+  String? draggable,
+
+  /// Prevents rendering of given element, while keeping child elements, e.g.
+  /// script elements, active.
+  String? hidden,
+
+  /// Often used with CSS to style a specific element. The value of this
+  /// attribute must be unique.
+  String? id,
+
+  ///
+  String? itemprop,
+
+  /// Defines the language used in the element.
+  String? lang,
+
+  /// Defines an explicit role for an element for use by assistive technologies.
+  String? role,
+
+  /// Assigns a slot in a shadow DOM shadow tree to an element.
+  String? slot,
+
+  /// Indicates whether spell checking is allowed for the element.
+  String? spellcheck,
+
+  /// Overrides the browser's default tab order and follows the one specified
+  /// instead.
+  String? tabindex,
+
+  /// Text to be displayed in a tooltip when hovering over the element.
+  String? title,
+
+  /// Specify whether an element's attribute values and the values of its
+  /// Text node
+  /// children are to be translated when the page is localized, or whether to
+  /// leave them unchanged.
+  String? translate,
+  Map<String, DomEventFn<L, V>>? events,
+  DomLifecycleEventFn<L>? onCreate,
+  DomLifecycleEventFn<L>? onUpdate,
+  DomLifecycleEventFn<L>? onRemove,
+  Iterable<DomNode<L, V>>? children,
+  DomNode<L, V>? child,
+  String? text,
+}) {
+  return DomElement<L, V>(
+    'selectedcontent',
+    key: key,
+    classes: classes,
+    attributes: <String, String>{
+      if (accesskey != null) 'accesskey': accesskey,
+      if (autocapitalize != null) 'autocapitalize': autocapitalize,
+      if (contenteditable != null) 'contenteditable': contenteditable,
+      if (dir != null) 'dir': dir,
+      if (draggable != null) 'draggable': draggable,
+      if (hidden != null) 'hidden': hidden,
+      if (id != null) 'id': id,
+      if (itemprop != null) 'itemprop': itemprop,
+      if (lang != null) 'lang': lang,
+      if (role != null) 'role': role,
       if (slot != null) 'slot': slot,
       if (spellcheck != null) 'spellcheck': spellcheck,
       if (tabindex != null) 'tabindex': tabindex,
@@ -14116,7 +14118,8 @@ DomElement<L, V> time<L, V>({
 }
 
 /// Defines the document's title that is shown in a browser's title bar or a
-/// page's tab. It only contains text; tags within the element are ignored.
+/// page's tab. It only contains text; HTML tags within the element, if any,
+/// are also treated as plain text.
 DomElement<L, V> title<L, V>({
   String? key,
   List<String>? classes,
@@ -14550,7 +14553,7 @@ DomElement<L, V> tt<L, V>({
 
 /// Represents a span of inline text which should be rendered in a way that
 /// indicates that it has a non-textual annotation. This is rendered by default
-/// as a simple solid underline but may be altered using CSS.
+/// as a single solid underline but may be altered using CSS.
 DomElement<L, V> u<L, V>({
   String? key,
   List<String>? classes,
@@ -14954,6 +14957,7 @@ DomElement<L, V> video<L, V>({
   String? translate,
 
   /// For the elements listed here, this establishes the element's width.
+  ///
   ///
   ///
   /// Note: For all other instances, such as
